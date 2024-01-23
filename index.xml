@@ -17,11 +17,11 @@
       <description>Checking shit&#xA;print(&amp;#34;your mom&amp;#34;) </description>
     </item>
     <item>
-      <title></title>
+      <title>About me</title>
       <link>https://theinvisiblefoe.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://theinvisiblefoe.github.io/about/</guid>
-      <description>lolcat Testing shit</description>
+      <description>I am Sabarno Saha, a student at IISER-Kolkata studying anything and everything I like. I like Physics and Maths. When I am not studying, which is often, I like quizzing, watching TV Shows and watching random game dev videos on YouTube.&#xA;I like coding sometimes. My computer runs Arch Linux with Hyprland. I use nvim as my text editor, mostly for writing LaTex stuff.</description>
     </item>
   </channel>
 </rss>

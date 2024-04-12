@@ -6,8 +6,24 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://theinvisiblefoe.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>The Mobius Strip</title>
+            <link>https://theinvisiblefoe.github.io/posts/mobius/</link>
+            <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://theinvisiblefoe.github.io/posts/mobius/</guid>
+            <description>Introduction Let&amp;rsquo;s begin with a rectangular piece of paper, which is sufficiently long. Take one end of the piece of the paper and rotate it by 180 degrees, and attach it to the other end. What you have just made(if done correctly) is something called a Möbius strip(or Moebius). This is a fun shape that a lot of kids make with some free time and a piece of paper. In this somewhat short article, we will see a formula that describes a Möbius strip in 3D Euclidean Space, and ultimately why that formula is wrong.</description>
+            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Let&rsquo;s begin with a rectangular piece of paper, which is sufficiently long. Take one end of the piece of the paper and rotate it by 180 degrees, and attach it to the other end.
+What you have just made(if done correctly) is something called a Möbius strip(or Moebius). This is a fun shape that a lot of kids make with some free time and a piece of paper.
+In this somewhat short article, we will see a formula that describes a Möbius strip in 3D Euclidean Space, and ultimately why that formula is wrong.</p>
+<h2 id="the-möbius-strip">The Möbius Strip</h2>
+<p>The Möbius(or Moebius) strip is the simplest non orientable surface.(More on this later). In fact, every non orientable surface contains a Moebius strip. If one constructs a Moebisu strip, one can see that it is one sided. A square has two</p>
+]]></content>
+        </item>
         
         <item>
             <title>Test</title>

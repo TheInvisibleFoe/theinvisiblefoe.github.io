@@ -26,16 +26,23 @@ In this somewhat short article, we will see a formula that describes a Möbius s
         </item>
         
         <item>
-            <title>Test</title>
+            <title>Introduction</title>
             <link>https://theinvisiblefoe.github.io/posts/test/</link>
             <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
             
             <guid>https://theinvisiblefoe.github.io/posts/test/</guid>
-            <description>Checking shit
-print(&amp;#34;your mom&amp;#34;) </description>
-            <content type="html"><![CDATA[<p>Checking shit</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;your mom&#34;</span>)
-</span></span></code></pre></div>]]></content>
+            <description>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff. I also like math.
+I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&amp;rsquo;ve been thinking about posting blogs about random stuff I find cool.</description>
+            <content type="html"><![CDATA[<p>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff.
+I also like math.</p>
+<p>I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&rsquo;ve been thinking about posting blogs about
+random stuff I find cool. Also, I need to improve my writing skills because they are currently abysmal and resembles how a preteen might write their essay for an exam.  I might also write some
+album reviews in a different page, but I am lazy. Finally, welcome to the Octopus Garden and it&rsquo;s horrendously written blogs.
+This is a list of the stuff I have written till now.(I will hyperlink them later).</p>
+<ul>
+<li>The Moebius Strip</li>
+</ul>
+]]></content>
         </item>
         
     </channel>

@@ -14,13 +14,13 @@
       <link>https://theinvisiblefoe.github.io/posts/mobius/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://theinvisiblefoe.github.io/posts/mobius/</guid>
-      <description>Introduction Let&amp;rsquo;s begin with a rectangular piece of paper, which is sufficiently long. Take one end of the piece of the paper and rotate it by 180 degrees, and attach it to the other end. What you have just made(if done correctly) is something called a Möbius strip(or Moebius). This is a fun shape that a lot of kids make with some free time and a piece of paper. In this somewhat short article, we will see a formula that describes a Möbius strip in 3D Euclidean Space, and ultimately why that formula is wrong.</description>
+      <description>Introduction This is my first blog post on Octopus&amp;rsquo; garden. In this one, I will write about the Moebius Strip. I found a nice article on it a long time ago by Gideon Schwartz called The Dark Side of the Moebius Strip. I thought I might write about that. This blog post is just an introduction to the mathematics of moebius strips. The accepted Spellings are Möbius or Moebius. I will be using Moebius rather than Möbius as I do not want to copy the umlaut everytime I write Möbius.</description>
     </item>
     <item>
       <title>Introduction</title>
-      <link>https://theinvisiblefoe.github.io/posts/test/</link>
+      <link>https://theinvisiblefoe.github.io/posts/intro/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://theinvisiblefoe.github.io/posts/test/</guid>
+      <guid>https://theinvisiblefoe.github.io/posts/intro/</guid>
       <description>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff. I also like math.&#xA;I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&amp;rsquo;ve been thinking about posting blogs about random stuff I find cool.</description>
     </item>
     <item>

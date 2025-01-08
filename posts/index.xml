@@ -15,22 +15,114 @@
             <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
             
             <guid>https://theinvisiblefoe.github.io/posts/mobius/</guid>
-            <description>Introduction Let&amp;rsquo;s begin with a rectangular piece of paper, which is sufficiently long. Take one end of the piece of the paper and rotate it by 180 degrees, and attach it to the other end. What you have just made(if done correctly) is something called a Möbius strip(or Moebius). This is a fun shape that a lot of kids make with some free time and a piece of paper. In this somewhat short article, we will see a formula that describes a Möbius strip in 3D Euclidean Space, and ultimately why that formula is wrong.</description>
+            <description>Introduction This is my first blog post on Octopus&amp;rsquo; garden. In this one, I will write about the Moebius Strip. I found a nice article on it a long time ago by Gideon Schwartz called The Dark Side of the Moebius Strip. I thought I might write about that. This blog post is just an introduction to the mathematics of moebius strips. The accepted Spellings are Möbius or Moebius. I will be using Moebius rather than Möbius as I do not want to copy the umlaut everytime I write Möbius.</description>
             <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
-<p>Let&rsquo;s begin with a rectangular piece of paper, which is sufficiently long. Take one end of the piece of the paper and rotate it by 180 degrees, and attach it to the other end.
-What you have just made(if done correctly) is something called a Möbius strip(or Moebius). This is a fun shape that a lot of kids make with some free time and a piece of paper.
-In this somewhat short article, we will see a formula that describes a Möbius strip in 3D Euclidean Space, and ultimately why that formula is wrong.</p>
+<p>This is my first blog post on Octopus&rsquo; garden. In this one, I will write about the Moebius Strip. I found a nice article on it a long time ago by Gideon Schwartz called <a href="https://doi.org/10.1080/00029890.1990.11995680">The Dark Side of the Moebius Strip</a>. I thought I might write about that. This blog post
+is just an introduction to the mathematics of moebius strips. The accepted Spellings are Möbius or Moebius. I will be using Moebius rather than Möbius as I do not want to copy the umlaut everytime I write Möbius.</p>
+<p>Let&rsquo;s begin with a rectangular piece of paper, which is somewhat long. Take one end of the piece of the paper and rotate it by 180 degrees, and attach it to the other end.
+What you have just made(if done correctly) is something called a Möbius strip(or Moebius). In this somewhat short article, we will see a formula that describes a Möbius strip in 3D Euclidean Space, and ultimately why that formula is wrong.</p>
+<p>Now before we proceed any further and try to wrap our minds on the analytical expression on the moebius strip, we must define what a moebius strip is.</p>
 <h2 id="the-möbius-strip">The Möbius Strip</h2>
-<p>The Möbius(or Moebius) strip is the simplest non orientable surface.(More on this later). In fact, every non orientable surface contains a Moebius strip. If one constructs a Moebisu strip, one can see that it is one sided. A square has two</p>
+<p>There are two definitions that are given, one topological and one physical. The physical definition is just how the moebius strip is constructed from a flat piece of paper. A long piece of rectangular paper
+joined together at opposite sides with a half twist. The topological definition is also very similar.</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Topological Definition</strong>
+    <p>
+Let us start with a closed rectangle with the "usual" topology.
+Now let us identify the two opposite edges point by point to
+each other, such that each vertex gets identified to the vertex that is diagonally across. 
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "\f085";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "\f071";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "\f058";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "\f057";  
+  }
+</style>
+
+
+<p>This is a quite nicely put definition. We will ignore what the &ldquo;usual&rdquo; topology means here, since we are not going to discuss upon it much further. The edges identfying with each other point by point just represents a rectangular
+piece of paper joined edge to edge. The identification of the vertex with the one diagonally across produces the half twist. We can easily see that the
+the corner in a Moeius Strip&rsquo;s end is the one joing with the corner that is diagonally oppposite to that corner. This is the identification the definition talks about.</p>
+<p>We are now somewhat clear on a definition for the Strip. This produces the usual mobius strip generated by the physical description. We note something interesting about the Moebius strip, one of its most elementary properties and primarily the one thing that makes it very
+interesting. The Moebius Strip is a one sided surface. Honestly one can understand it by simply seeing that when you start from a point and move along the length of the strip, after a full 2pi rotation it returns to the other side of the Strip.(insert crab GIF here)</p>
+<p>We explore some more interesting properties before we move on to the main topic of our discussion. Let&rsquo;s make a Moebius Strip. Now cut it up following the centerline perfectly(almost perfectly), we obtain a non Moebius Strip, which
+is double sided(called an annulus). Now if we cut a bit off center, we get a two interlinked strips -  a Moebius Strip and an annulus that is twice the length of the original Moebius Strip. Here the cutting is assumed to be done perfectly parllel to the length
+of the rectangle that created the Moebius Strip. This might be very weird to think about. Even cutting a bit off center would produce a radically different shape.</p>
+<p>Now we move onto the main focus of this blogpost, the way to generate a Moebius strip in 3D.</p>
 ]]></content>
         </item>
         
         <item>
             <title>Introduction</title>
-            <link>https://theinvisiblefoe.github.io/posts/test/</link>
+            <link>https://theinvisiblefoe.github.io/posts/intro/</link>
             <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
             
-            <guid>https://theinvisiblefoe.github.io/posts/test/</guid>
+            <guid>https://theinvisiblefoe.github.io/posts/intro/</guid>
             <description>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff. I also like math.
 I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&amp;rsquo;ve been thinking about posting blogs about random stuff I find cool.</description>
             <content type="html"><![CDATA[<p>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff.

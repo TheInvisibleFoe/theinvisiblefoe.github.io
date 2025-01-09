@@ -1,0 +1,33 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Blog on Welcome to the Octopus&#39; Garden</title>
+        <link>https://theinvisiblefoe.github.io/posts/blog/</link>
+        <description>Recent content in Blog on Welcome to the Octopus&#39; Garden</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://theinvisiblefoe.github.io/posts/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Introduction</title>
+            <link>https://theinvisiblefoe.github.io/posts/blog/intro/</link>
+            <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://theinvisiblefoe.github.io/posts/blog/intro/</guid>
+            <description>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff. I also like math.
+I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&amp;rsquo;ve been thinking about posting blogs about random stuff I find cool.</description>
+            <content type="html"><![CDATA[<p>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff.
+I also like math.</p>
+<p>I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&rsquo;ve been thinking about posting blogs about
+random stuff I find cool. Also, I need to improve my writing skills because they are currently abysmal and resembles how a preteen might write their essay for an exam.  I might also write some
+album reviews in a different page, but I am lazy. Finally, welcome to the Octopus Garden and it&rsquo;s horrendously written blogs.
+This is a list of the stuff I have written till now.(I will hyperlink them later).</p>
+<ul>
+<li>The Moebius Strip</li>
+</ul>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

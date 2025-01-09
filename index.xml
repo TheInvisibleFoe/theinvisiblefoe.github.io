@@ -7,20 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://theinvisiblefoe.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Mobius Strip</title>
-      <link>https://theinvisiblefoe.github.io/posts/mobius/</link>
-      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://theinvisiblefoe.github.io/posts/mobius/</guid>
-      <description>Introduction This is my first blog post on Octopus&amp;rsquo; garden. In this one, I will write about the Moebius Strip. I found a nice article on it a long time ago by Gideon Schwartz called The Dark Side of the Moebius Strip. I thought I might write about that. This blog post is just an introduction to the mathematics of moebius strips. The accepted Spellings are Möbius or Moebius. I will be using Moebius rather than Möbius as I do not want to copy the umlaut everytime I write Möbius.</description>
+      <title>Introduction</title>
+      <link>https://theinvisiblefoe.github.io/posts/aotw/intro/</link>
+      <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://theinvisiblefoe.github.io/posts/aotw/intro/</guid>
+      <description>I listen to music now and then and then some more. Now and then I get stuck into a vicious listening cycle, where I listen to same songs over and over again. In an attempt to increase and diversify my music tastes, I have been listening to a new album every week and I&amp;rsquo;ll try to jot down my feelings here.&#xA;Pop and rock have always been my go-to genres, mostly leaning towards rock.</description>
     </item>
     <item>
       <title>Introduction</title>
-      <link>https://theinvisiblefoe.github.io/posts/intro/</link>
+      <link>https://theinvisiblefoe.github.io/posts/blog/intro/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://theinvisiblefoe.github.io/posts/intro/</guid>
+      <guid>https://theinvisiblefoe.github.io/posts/blog/intro/</guid>
       <description>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff. I also like math.&#xA;I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&amp;rsquo;ve been thinking about posting blogs about random stuff I find cool.</description>
     </item>
     <item>
@@ -28,7 +28,7 @@
       <link>https://theinvisiblefoe.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://theinvisiblefoe.github.io/about/</guid>
-      <description>I am Sabarno Saha, a student at IISER-Kolkata studying anything and everything I like. I like Physics and Maths. When I am not studying, which is often, I like quizzing, watching TV Shows and watching Sebastian Lague or Nerdstalgic on YouTube.&#xA;I like coding sometimes. My computer runs Fedora with Hyprland. I used to use Arch before, but I could not handle a distro that randomly breaks on my laptop when I try to do actual work, and then I have to try to fix for multiple hours where you go through a ton of forums and finally, when nothing works, do a fresh install of Arch.</description>
+      <description>I am Sabarno Saha, a student at IISER-Kolkata studying anything and everything I like. I like Physics and Maths. When I am not studying, which is often, I like quizzing, watching TV Shows and watching Sebastian Lague or Nerdstalgic on YouTube.&#xA;I like coding sometimes. My computer runs Fedora with Hyprland. I used to use Arch before, but I could not handle a distro that randomly breaks on my laptop when I try to do actual work(which is not often).</description>
     </item>
   </channel>
 </rss>

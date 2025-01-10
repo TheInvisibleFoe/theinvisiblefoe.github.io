@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 07 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://theinvisiblefoe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Equilibrium innit?</title>
+      <link>https://theinvisiblefoe.github.io/posts/blog/eqbm-dist/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://theinvisiblefoe.github.io/posts/blog/eqbm-dist/</guid>
+      <description>Introduction This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University. The slides for which were made in LaTeX using beamer and can be found here, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. Enjoy :)&#xA;A Stochastic Description We want to describe physical systems involving a large number of degrees of freedom, say a gas isolated in a container, using stochastic processes.</description>
+    </item>
     <item>
       <title>Introduction</title>
       <link>https://theinvisiblefoe.github.io/posts/aotw/intro/</link>

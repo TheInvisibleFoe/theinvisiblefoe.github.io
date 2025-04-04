@@ -1,32 +1,2011 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Welcome to the Octopus&#39; Garden</title>
+        <title>Blog on Welcome to the Octopus&#39; Garden</title>
         <link>https://theinvisiblefoe.github.io/posts/</link>
-        <description>Recent content in Posts on Welcome to the Octopus&#39; Garden</description>
+        <description>Recent content in Blog on Welcome to the Octopus&#39; Garden</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://theinvisiblefoe.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Blog</title>
-            <link>https://theinvisiblefoe.github.io/posts/blog/</link>
-            <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+            <title>Equilibrium Innit</title>
+            <link>https://theinvisiblefoe.github.io/posts/eqbm/</link>
+            <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
             
-            <guid>https://theinvisiblefoe.github.io/posts/blog/</guid>
-            <description></description>
-            <content type="html"><![CDATA[]]></content>
+            <guid>https://theinvisiblefoe.github.io/posts/eqbm/</guid>
+            <description>Introduction This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University. The slides for which were made in LaTeX using beamer and can be found here, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. The blog aims to demonstrate how to deal with statistically large systems(systems with a large number of degrees of freedom) and the conditions under which they might attain equilibrium.</description>
+            <content type="html"><![CDATA[<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="introduction">Introduction</h1>
+<p>This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University.
+The slides for which were made in LaTeX using beamer and can be found <a href="https://raw.githubusercontent.com/TheInvisibleFoe/IISER_notes/main/IdentPres/slides/main.pdf">here</a>, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. The blog aims to demonstrate how to deal with statistically large systems(systems with a large number of degrees of freedom) and the conditions under which they might attain equilibrium. Enjoy :)</p>
+<h1 id="a-stochastic-description">A Stochastic Description</h1>
+<p>Let us start with a closed rectangle with the &ldquo;usual&rdquo; topology.
+Now let us identify the two opposite edges point by point to
+each other, such that each vertex gets identified to the vertex that is diagonally across.</p>
+<h3 id="stochastic-process">Stochastic Process</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Stochastic Process</strong>
+    <p>
+
+
+A stochastic process is a sequence of random variables where the
+indexing of the variables often carries the notion of time.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>An example would be Brownian Motion, which is described by the Wiener
+process.
+</p>
+\[P(\hat{W}(t+\Delta t)=x | \hat{W}(t)=x') = \frac{1}{\sqrt{2 \pi \Delta t}}\exp(-\frac{(x-x')^2}{2 \Delta t})\]
+<h3 id="markov-chains">Markov Chains</h3>
+<p>Most of the physical processes that we study in classical statistical
+physics is modelled as Markov Chains.</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Stochastic Process</strong>
+    <p>
+
+Markov Property Let \(\{X_n\}\) be a stochastic process. The markov
+property is defined as
+\[\mathbb{P}(X_{n+1}|X_n,X_{n-1},...,X_0) = \mathbb{P}(X_{n+1}|X_n)\]
+Any stochastic process satisfying the Markov property is called a Markov
+Chain.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>Essentially the future of the system is independent of the past given
+the present state.</p>
+<h3 id="continuous-time-markov-chainsctmc">Continuous Time Markov Chains(CTMC)</h3>
+<p>These are markov chains with the index as time \(\{X(t)\}_t\). Let us
+define a state space as the set of all values \(S\) a random variable can
+assume. Then we use the notation </p>
+\[P(X(t) = s) \equiv P(s;t)\]
+<p> We can
+rewrite the markov property as
+</p>
+\[P(s_n;t_n|s_{n-1};t_{n-1},s_{n-2};t_{n-2},...,s_0;t_0) = P(s_n;t_n|s_{n-1};t_{n-1})\]
+<p>
+where \(s,s_i \in S ~ \forall i\).</p>
+<p>Now using the theorem of total probability we can write the Chapman
+Kolmogorov equation as</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Chapman Kolmogorov Equation</strong>
+    <p>
+\[P(s;t|s_0;t_0) = \sum_{s' \in S} P(s;t|s';t')P(s';t'|s_0;t_0)\] where
+\(t > t' > t_0\)
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<h3 id="continuous-time-markov-chainsctmc-1">Continuous Time Markov Chains(CTMC)</h3>
+<p>We now choose a time interval \(dt\) and rewrite the Chapman Kolmogorov
+equation, dropping the explicit dependence on \(x_0,t_0\)
+</p>
+\[P(s;t+dt) = \sum_{s' \in S} P(s;t+dt|s';t)P(s';t)\]
+<p> Since this is an
+infinitesimal time interval, we can write the above equation as
+</p>
+\[P(s;t+dt|s';t) = \delta_{ss'} +Q_{ss'}dt + o(dt)\]
+<p> where \(Q\) is the
+transition rate matrix.</p>
+<h3 id="transition-rate-matrix">Transition Rate Matrix</h3>
+<p>The transition rate matrix should satisfy the following conditions</p>
+<ol>
+<li>
+<p>\(Q_{ss'} \geq 0\) for \(s \neq s'\)</p>
+</li>
+<li>
+<p>\(Q_{ss} = -\sum_{s' \neq s} Q_{ss'}\)</p>
+</li>
+</ol>
+<p>The first condition ensures that the transition rate is non-negative and
+the second condition essentially ensures that the probability of
+transitioning from a state \(s\) to any state is 1.</p>
+<p>Thus we can write </p>
+\[\mathbb{P}(t+dt) = \mathbb{I} + Qdt\]
+<p> where
+\(\mathbb{I}\) is the identity matrix.</p>
+<h3 id="transition-rate-matrix-1">Transition Rate Matrix</h3>
+<p>We define \(k_{xx'}\) as the jump rate from state \(x'\) to \(x\). We thus
+define the elements of the transition rate matrix as
+</p>
+\[p(x;t+dt|x';t' ) = Q_{xx'} = k_{xx'} \quad \quad x \neq x'\]
+<p> And the
+diagonal elements are thus given as
+</p>
+\[Q_{xx} = -\sum_{x' \neq x} k_{xx'}\]
+<p>We also assume that the elements \(k_{xx'}\) do not change with time.</p>
+<p>The change in probability of being in state \(x\) at time \(t\) is the
+<strong>inflow</strong> of probability from all other states which is
+\(k_{xx'}p(x';t)\) minus the <strong>outflow</strong> of probability \(k_{x'x}p(x;t)\).
+We can now write the master equation as
+</p>
+\[\dv{p(x;t)}{t} = \sum_{x' \in S} k_{xx'}p(x';t) - k_{x'x}p(x;t)\]
+<p> This
+becomes clearer when we define the probability current.</p>
+<h3 id="master-equations">Master Equations</h3>
+<p>These equations describe the time evolution of the system that are
+modelled as being in the a probabilistic combination of a set of states
+at any given time. These are phenomenologically modelled first order
+differential equations.</p>
+<p>These are used in a variety of fields in physics, and other related
+fields. These are used for studying birth and death processes,
+non-equilibrium statistical mechanics, chemical reactions, and a whole
+lot more.<br>
+The most common one that we see is the one used here is of the form
+</p>
+\[\frac{d \bold{p}}{ dt} = \mathbb{A}\bold{p}\]
+<p> where \(\mathbb{A}\) is
+the matrix of connections and \(\bold{p}\) is the probability distribution
+column vector.</p>
+<h3 id="probability-current">Probability Current</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Probability Current</strong>
+    <p>
+ The probability current is defined as the flow of
+probability from state \(x'\) to state \(x\). We define the probability
+current as \[J_{xx'} = k_{xx'}p(x';t) - k_{x'x}p(x;t)\]
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>The master equation can now be written as
+</p>
+\[\dv{p(x;t)}{t} = \sum_{x' \in S} J_{xx'}\]
+<p>A bit of physics coming up ahead \(:)\)</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Microscopic Reversibility</strong>
+    <p>
+ If for any allowed jump
+\(x \rightarrow x'\)(i.e. \(k_{xx'} > 0\)), the reverse jump
+\(x' \rightarrow x\) \((k_{x'x}>0)\) is also allowed, then the system is
+said to be microscopically reversible.
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<h3 id="jump-networks">Jump Networks</h3>
+<p>These systems are quite often represented as jump networks, where the
+nodes of the graph represent the states \(x\) and the arrows(edges)
+\(x' \rightarrow x\) represent the allowed jumps i.e. the jumps with
+non-zero transition rates(\(k_{xx'}>0\)).</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Some Physics</strong>
+    <p>
+ The **jump networks** dealt with in physics are **strongly
+connected**. That is, given any two states \(x\) and \(x'\), there is a
+non-zero probability of transitioning from \(x\) to \(x'\) in a finite
+number of steps.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>This property has some physical justification. Coupled together with
+microscopic reversibility, this property ensures that the graphs aren&rsquo;t
+disconnected. Disconnected graphs often lead to systems with
+non-interacting components, which can be studied independently reducing
+to the strongly connected graph.\</p>
+<h3 id="jump-networks-1">Jump Networks</h3>
+<p><em>Strongly connected graphs also posses a property called Irreducibility.
+Irreducibility is a necessary condition for the Perron Frobenius theorem
+to hold.</em></p>
+<h3 id="jump-networks-2">Jump Networks</h3>
+<p>Here are is an example of a jump network :</p>
+<p>![Source : [1]](jump network.png){width=&ldquo;4in&rdquo;}</p>
+<h1 id="steady-state--equilibrium-distribution">Steady State &amp; Equilibrium Distribution</h1>
+<h3 id="conditions">Conditions</h3>
+<p>Steady state and equilibrium distribution are often used
+interchangeably. However, they are defined quite differently. The
+condition for a system to be in equilibrium is a bit more constrained
+than that of a steady state.</p>
+<p>The necessary condition for both to hold is that the probability of
+being in a state \(x\) at time \(t\) is independent of time. Thus,
+essentially our master equation equates to \(0\).
+</p>
+\[\dv{p^{st}(x)}{t} = \sum_{x' \neq x} J_{xx'} = 0\]
+<p>We will show that under certain conditions, the system relaxes to a
+stationary state. </p>
+\[\lim_{t \to \infty} p(x;t) = p^{st}(x)\]
+<h3 id="detailed-balance-condition">Detailed Balance Condition</h3>
+<p>The independence of \(p(x)\) on time can be ensured by the following
+conditions:</p>
+<ol>
+<li>
+<p>\(\sum_{x' \neq x} J_{xx'} = 0\)</p>
+</li>
+<li>
+<p>\(J_{xx'} = 0\) for all states \(x,x'\)</p>
+</li>
+</ol>
+<p>Condition 1 is the condition for a steady state, while condition 2 is
+the condition for equilibrium.</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Detailed Balance Condition</strong>
+    <p>
+ The detailed balance condition is defined as
+\[k_{xx'}p^{st}(x') = k_{x'x}p^{st}(x) \quad  \forall ~x,x' \in S\]
+\[J_{xx'}  =0 \quad \forall x,x' \in S\]
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>When the jump networks satisfy the detailed balance condition, the
+system is said to be in equilibrium.</p>
+<h1 id="perron-frobenius-theorem">Perron Frobenius Theorem</h1>
+<h3 id="irreducibility">Irreducibility</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Reducibility</strong>
+    <p>
+ A matrix \(\mathbb{A}\) is said to be reducible when there
+exists a Permutation matrix \(P\) such that \[P^TAP = \begin{pmatrix}
+      \mathbb{X}& \mathbb{Y}\\
+      0 & \mathbb{Z}
+    \end{pmatrix}\] where \(\mathbb{X}\) and \(\mathbb{Z}\) are square
+matrices.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>We can easily see that if all the elements of \(\mathbb{A}\) are positive,
+then the matrix is irreducible. <em>This is a necessary condition for the
+Perron Frobenius theorem to hold.</em></p>
+<h3 id="irreducibility-1">Irreducibility</h3>
+<p>We can reframe the Irreducibility problem in terms of graphs.</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Irreducibility in terms of Graphs</strong>
+    <p>
+
+
+-   The graph \(G(\mathbb{A})\) of a matrix \(\mathbb{A}_{n \times n}\) is a
+    directed graph on \(n\) nodes \({N_1,...,N_n}~\) in which there is a
+    directed edge from \(N_i\) to \(N_j\) if and only if \(A_{ij} \neq 0\).
+
+-   A graph \(G(\mathbb{A})\) is called strongly connected if for every
+    pair of nodes \(N_i\) and \(N_j\) there is a directed path from \(N_i\) to
+    \(N_j\).
+
+-   A matrix \(\mathbb{A}\) is irreducible iff the graph of the matrix is
+    strongly connected.
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>We have already assumed that the jump network is strongly connected.</p>
+<h3 id="strongly-connected-graphs">Strongly Connected Graphs</h3>
+<p>We can also think of Irreducibility from the point of view of the markov
+chains. Two states are said to be <strong>communicating</strong> if there is a
+non-zero probability of transitioning from one state to the other in a
+finite number of steps. This is an equivalence relation and thus
+partitions the state space into equivalence classes.<br>
+The markov chain is said to be irreducible if there is only one
+equivalence class, which is the state space of the Markov chain.</p>
+<p>Here in our jump networks any state can be reached from any other state
+in a finite number of steps. Thus our markov chain is irreducible.</p>
+<h3 id="strongly-connected-graphs-1">Strongly Connected Graphs</h3>
+<p><img alt="Source : Wikipedia" src="/posts/eqbm/scc.png">{width=&ldquo;4in&rdquo;}</p>
+<h3 id="primitive-matrices">Primitive Matrices</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Primitive Matrices</strong>
+    <p>
+
+
+-   A matrix \(\mathbb{A}\) is called primitive if there exists a positive
+    integer \(k\) such that \(\mathbb{A}^k\) is a positive matrix (i.e. all
+    elements are positive).
+
+-   A matrix \(\mathbb{A}\) is primitive if it has only one eigenvalue on
+    the spectral circle.
+
+-   A non-negative irreducible matrix \(\mathbb{A}\) is primitive with
+    \(r = \rho(\mathbb{A})\) iff
+    \(\lim_{k \to \infty} (\mathbb{A}\slash r)^k\) exists, in which case
+    \[\lim_{k \to \infty} \left(\frac{\mathbb{A}}{r}\right)^k = \frac{p q^{T}}{q^{T} p} > 0\]
+    where \(p\) and \(q\) are the Perron vectors for \(\mathbb{A}\) and
+    \(\mathbb{A}^T\) respectively.
+
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<h3 id="the-perron-frobenius-theorem">The Perron Frobenius Theorem</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Perron Frobenius Theorem</strong>
+    <p>
+ Let \(\mathbb{A}\) be an irreducible matrix.
+
+-   There exists a positive real number \(\lambda\) such that
+    \[\mathbb{A}\pi = \lambda \pi\] called the Perron-Frobenius
+    eigenvalue. Moreover, the eigenvalue is the spectral radius of the
+    matrix.
+
+-   The eigenspace corresponding to the Perron-Frobenius eigenvalue is
+    one-dimensional, that is, the corresponding eigenvector is
+    non-degenerate.
+
+-   Then there exists a unique probability vector \(\pi\) such that
+    \[\mathbb{A}\pi =  \lambda \pi\] called the Perron vector. Moreover,
+    the vector \(\pi\) is strictly positive.
+
+-   Furthermore, there are no non-negative eigenvectors of \(\mathbb{A}\)
+    except for all positive multiples of \(\pi\).
+
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<h3 id="stationary-state-distribution">Stationary State Distribution</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Stationary State Dist. </strong>
+    <p>
+Let \(P\) be the transition probability matrix for
+an irreducible Markov chain and let \(\pi\) be the perron vector for the
+matrix \(P\).
+
+-   The kth step probability matrix is given by \(P^k\) since the
+    \((i,j)\)th entry of \(P^k\) is the probability of transitioning from
+    state \(j\) to state \(i\) in exactly \(k\) steps.
+
+-   The \(k\)the step distribution is given by \(p(k) = P^k p(0)\)
+
+-   If \(\bold{P}\) is primitive and if \(e\) denotes the column of all
+    ones, then the limit
+    \[\lim_{k \to \infty} \bold{P}^k = \pi e^T \quad \quad \quad \text{and} \quad \quad
+               \lim_{k \to \infty} p(k) = \pi\]
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<h3 id="stationary-state-distribution-1">Stationary State Distribution</h3>
+<p>[<strong>Proof:</strong> ]{.underline}<br>
+All stochastic matrices \(\bold{P}\) have a spectral radius
+\(\rho(\bold{P}) =1\). All column sums equal to 1. Thus, \(e\) is an
+eigenvector of \(\bold{P}^T\) with eigenvalue \(1\), where \(e\) is the column
+vector with all ones in its entries. We also have
+\(\lVert{\bold{P}}\rVert_{1} = 1\). Using the fact that
+\(\rho(\star) \leq \lVert\star \rVert\) for every matrix norm(See [2]),
+we get that
+</p>
+\[1 \leq \rho(\bold{P}) \leq \lVert\bold{P}\rVert_{1} = 1 ~~~ \Rightarrow \rho (\bold{P}) =1\]
+<p>We know that \(\bold{P}\) is primitive with \(\rho(\bold{P}) = 1\), we know
+that </p>
+\[\lim_{k \to \infty} \bold{P}^k = \frac{p q^T}{q^T p}\]
+<p> where \(p\)
+and \(q\) are the perron vectors for \(\bold{P}\) and \(\bold{P}^T\)
+respectively. The perron vector for \(\bold{P}^T\) is \(e\) and let the
+perron vector for \(\bold{P}\) be \(\pi\).</p>
+<h3 id="stationary-state-distribution-2">Stationary State Distribution</h3>
+<p>We thus have,
+</p>
+\[\lim_{k \to \infty} \bold{P}^k = \frac{\pi e^T}{e^T \pi}\]
+<p> From the
+conservation of probability we have that \(\sum_i \pi_i =1\), we have that
+\(e^T\pi = \sum_i \pi_i = 1\).Thus we have
+</p>
+\[\lim_{k \to \infty} \bold{P}^k = \pi e^T\]
+<p> Now we have
+</p>
+\[\lim_{k \to \infty} p(k) = (\lim_{k \to \infty} \bold{P}^k) p(0)= \pi e^Tp(0)\]
+<p>
+Again \(e^Tp(0) = \sum_i p_i(0) = 1\). This leads to
+</p>
+\[\lim_{k \to \infty} p(k) = \pi\]
+<p>Note that the stationary limit is independent of the initial
+distribution \(p(0)\) here.</p>
+<h3 id="stationary-state-distribution-3">Stationary State Distribution</h3>
+<p>We now actually verify that \(\pi\) is indeed the stationary distribution.
+Let us recast the master equation into matrix form.
+</p>
+\[\frac{d p(t)}{dt} = Q p(t) = \frac{1}{dt}(\bold{P}- \mathbb{I}) p(t)\]
+<p>
+where \(Q\) is the transition rate matrix. Now we have
+</p>
+\[(\bold{P}- \mathbb{I})\pi = \bold{P}\pi - \pi = \pi -\pi = 0\]
+<p> Thus
+the infinite time limit of the probability distribution is indeed the
+stationary distribution. </p>
+\[\Rightarrow  \frac{d \pi }{dt} = 0\]
+<p>Now the stationary distribution must be unique since the Perron root of
+any irreducible matrix has a one dimensional eigenspace. Thus the
+eigenvector must be unique due to the conservation of probability.</p>
+<h3 id="stationary-state-distribution-4">Stationary state Distribution</h3>
+<p>SIDE NOTE: After completing the presentation, I found a proof that
+doesn&rsquo;t use Perron Frobenius theorem. However, that only proves it for a
+transition rate matrix with all positive entries.[1]</p>
+<h3 id="stationary-state-distribution-5">Stationary state Distribution</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Stationary State Dist.</strong>
+    <p>
+ for Imprimitive matrices Let \(P\) be the
+transition probability matrix for an irreducible Markov chain and let
+\(\pi\) be the perron vector for the matrix \(P\).
+
+-   If \(\bold{P}\) is imprimitive and if \(e\) denotes the column of all
+    ones, then the limit
+    \[\lim_{k \to \infty} \frac{\mathbb{I} + \bold{P}+ ... +\bold{P}^{k-1}}{k} = \pi e^T\]
+    and
+
+    \[\lim_{k \to \infty} \frac{p(0) + p(1) + ...+p(k-1)}{k} = \pi\]
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>We use Cesaro sums to define the stationary state probability
+distribution. However, we won&rsquo;t deal with it here.</p>
+<h1 id="graph-theory">Graph Theory</h1>
+<h3 id="preliminaries">Preliminaries</h3>
+<ul>
+<li>
+<p>A graph is a collection of vertices and edges. The edges connect the
+vertices.</p>
+</li>
+<li>
+<p>The degree of a vertex is the number of edges connected to it.</p>
+</li>
+<li>
+<p>A walk is a sequence of vertices connected by edges.</p>
+</li>
+<li>
+<p>A trail is a walk with no repeated edges.</p>
+</li>
+<li>
+<p>A cycle is a non-empty trail that starts and ends at the same
+vertex.</p>
+</li>
+<li>
+<p>A connected graph is a graph where there is a path between every
+pair of vertices.</p>
+</li>
+</ul>
+<h3 id="trees">Trees</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Trees</strong>
+    <p>
+ A tree is a connected graph with no cycles.
+
+
+Here is one property of a tree that we plan to use later.\
+A tree with \(n\) vertices has \(n-1\) edges.
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<h3 id="handshaking-lemma">Handshaking Lemma</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Handshaking Lemma</strong>
+    <p>
+ The sum of the degrees of all the vertices of a graph
+is equal to twice the number of edges.\
+\[\sum_{i=1}^{n} d_i = 2|E|\] where \(d_i\) is the degree of the \(i\)th
+vertex and \(|E|\) is the number of edges.
+
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<h3 id="an-obvious-theorem">An &quot;obvious&quot; Theorem</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>An &#34;obvious&#34; Theorem</strong>
+    <p>
+ A tree has at least two vertices of degree 1.
+
+
+[**Proof**]{.underline}\
+Every tree has \(n-1\) edges, so the sum of the degrees of all vertices of
+any tree has to be \(2(n-1)\). But if there are fewer than two vertices of
+degree one, then the sum of the degrees of all vertices must be at least
+\(2(n-1)+1\), which is a contradiction.
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<h1 id="equilibrium-distribution">Equilibrium Distribution</h1>
+<h3 id="trees-1">Trees</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Stochastic Process</strong>
+    <p>
+Equilibrium dist. for trees Let the jump network be a tree. Then the
+stationary state distribution is the equilibrium distribution.
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>[<strong>Proof</strong>]{.underline}<br>
+We know that there exists at least \(2\) vertices with degree \(1\). Let us
+label one of them as \(x\). Thus, for this vertex
+\(\sum_{x' \neq x} J_{xx'} = 0\) for all states \(x'\) connected to it,
+under the stationary distribution. Since this is only connected to
+another vertex say \(a\), We have \(J_{xa} = 0\). We can then remove the
+vertex \(x\) and the edge \(\{x,a\}\). This is still a tree, so we can do
+this iteratively. We can reach a point where we have only one vertex
+left. For the lone vertex, the detailed balance condition is trivially
+satisfied. Thus, the equilibrium distribution is the stationary
+distribution.</p>
+<h3 id="cyclic-networks">Cyclic Networks</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Cyclic Network</strong>
+    <p>
+ A cyclic network is a graph with a cycle in it.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Cyclic Networks</strong>
+    <p>
+ For cyclic networks, the system admits an equilibrium
+distribution if for any sequence states \((x_0,...,x_n)\) all different
+from each other
+\[k_{x_0x_1}k_{x_1x_2}...k_{x_{n-1}x_n}k_{x_nx_0} = k_{x_0x_n}k_{x_nx_{n-1}}...k_{x_1x_0}\]
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>We can see that non-vanishing stationary currents can only survive in
+loops. If we allow for all cycles the forward and back jump rates to be
+equal, we can then allow for the balance of probability currents.</p>
+<h3 id="note">Note</h3>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Admission of Equilibrium Distribution</strong>
+    <p>
+ For cyclic networks, the system
+admits an equilibrium distribution if for any sequence states
+\((x_0,...,x_n)\) all different from each other
+\[k_{x_0x_1}k_{x_1x_2}...k_{x_{n-1}x_n}k_{x_nx_0} = k_{x_0x_n}k_{x_nx_{n-1}}...k_{x_1x_0}\]
+
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    background-color:  #1d1e1e  ;
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    background-color: #fff3e0;
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    background-color: #e8f5e9;
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    background-color: #ffebee;
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>Note that this also includes the acyclic cases as well. For all
+sequences \((x_0,...,x_n)\) that is not a cycle with \(x_0\) we get
+\(k_{x_0 x_n} = k_{x_n x_0} = 0\). Thus, this condition is trivially
+satisfied for acyclic networks.</p>
+<p>Questions?</p>
+<h1 id="danke-schön">Danke Schön</h1>
+<h3 id="references">References</h3>
+<p>[1] : Luca Peliti and Simone Pigolotti, Stochastic Thermodynamics, Princeton University Press, Princeton, NJ, 2023.</p>
+<p>[2]: Carl D. Meyer, Applied Linear Algebra and Matrix Analysis, Society for Industrial and Applied Mathematics (SIAM), Philadelphia, PA, 2000.</p>
+<p>[3]: Naoto Shiraishi, An Introduction to Stochastic Thermodynamics: From Basic to Advanced, Springer Nature, Fundamental Theories of Physics, vol. 212, 2023. ISBN: 978-981-19-8186-9. DOI: 10.1007/978-981-19-8186-9</p>
+<p>[4]: Nico G. van Kampen, Stochastic Processes in Physics and Chemistry, 3rd ed., North-Holland, 2007. ISBN: 978-0444529657.</p>
+<p>[5]: William Feller, An Introduction to Probability Theory and Its Applications, Vol. 1, 3rd ed., Wiley, 1968. ISBN: 978-0471257080.</p>
+<p>[6]: Reinhard Diestel, Graph Theory, 5th ed., Springer, 2017. ISBN: 978-3662536216. Link to Online Version</p>
+<p>[7]: Richard J. Trudeau, Introduction to Graph Theory, Dover Publications, 1993. ISBN: 978-0486678702.</p>
+<p>[8]: Christopher Jarzynski, Equalities and Inequalities: Irreversibility and the Second Law of Thermodynamics at the Nanoscale, Annual Review of Condensed Matter Physics, vol. 2, pp. 329–351, 2011. DOI: 10.1146/annurev-conmatphys-062910-140506.</p>
+]]></content>
         </item>
         
         <item>
-            <title>AoTW</title>
-            <link>https://theinvisiblefoe.github.io/posts/aotw/</link>
-            <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
+            <title>Introduction</title>
+            <link>https://theinvisiblefoe.github.io/posts/intro/</link>
+            <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
             
-            <guid>https://theinvisiblefoe.github.io/posts/aotw/</guid>
-            <description></description>
-            <content type="html"><![CDATA[]]></content>
+            <guid>https://theinvisiblefoe.github.io/posts/intro/</guid>
+            <description>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff. I also like math.
+I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&amp;rsquo;ve been thinking about posting blogs about random stuff I find cool.</description>
+            <content type="html"><![CDATA[<p>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff.
+I also like math.</p>
+<p>I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&rsquo;ve been thinking about posting blogs about
+random stuff I find cool. Also, I need to improve my writing skills because they are currently abysmal and resembles how a preteen might write their essay for an exam.  I might also write some
+album reviews in a different page, but I am lazy. Finally, welcome to the Octopus Garden and it&rsquo;s horrendously written blogs.
+This is a list of the stuff I have written till now.(I will hyperlink them later).</p>
+<ul>
+<li>The Moebius Strip</li>
+</ul>
+]]></content>
         </item>
         
     </channel>

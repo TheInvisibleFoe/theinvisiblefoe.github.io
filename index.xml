@@ -4,31 +4,24 @@
     <title>Welcome to the Octopus&#39; Garden</title>
     <link>https://theinvisiblefoe.github.io/</link>
     <description>Recent content on Welcome to the Octopus&#39; Garden</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://theinvisiblefoe.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Equilibrium innit?</title>
-      <link>https://theinvisiblefoe.github.io/posts/blog/eqbm-dist/</link>
-      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://theinvisiblefoe.github.io/posts/blog/eqbm-dist/</guid>
+      <title>Equilibrium Innit</title>
+      <link>https://theinvisiblefoe.github.io/posts/eqbm/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://theinvisiblefoe.github.io/posts/eqbm/</guid>
       <description>Introduction This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University. The slides for which were made in LaTeX using beamer and can be found here, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. The blog aims to demonstrate how to deal with statistically large systems(systems with a large number of degrees of freedom) and the conditions under which they might attain equilibrium.</description>
     </item>
     <item>
       <title>Introduction</title>
-      <link>https://theinvisiblefoe.github.io/posts/aotw/intro/</link>
-      <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://theinvisiblefoe.github.io/posts/aotw/intro/</guid>
-      <description>I listen to music now and then and then some more. Now and then I get stuck into a vicious listening cycle, where I listen to same songs over and over again. In an attempt to increase and diversify my music tastes, I have been listening to a new album every week and I&amp;rsquo;ll try to jot down my feelings here.&#xA;Pop and rock have always been my go-to genres, mostly leaning towards rock.</description>
-    </item>
-    <item>
-      <title>Introduction</title>
-      <link>https://theinvisiblefoe.github.io/posts/blog/intro/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://theinvisiblefoe.github.io/posts/blog/intro/</guid>
-      <description>Hello people. I am InvisibleFoe, a physics major at the Indian Institute of Science Education and Research Kolkata. Currently I am interested in Stochastic thermodynamics and its assosciated stuff. I also like math.&#xA;I made this website because I wanted to learn HuGo. After doing that, the website lay dormant for a year because I was too lazy to even write anything for it.So now in an effort to actually do something about this website, I&amp;rsquo;ve been thinking about posting blogs about random stuff I find cool.</description>
+      <link>https://theinvisiblefoe.github.io/aotw/intro/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://theinvisiblefoe.github.io/aotw/intro/</guid>
+      <description>I listen to music now and then and then some more. Now and then I get stuck into a vicious listening cycle, where I listen to same songs over and over again. In an attempt to increase and diversify my music tastes, I have been listening to a new album every week and I’ll try to jot down my feelings here.&#xA;Pop and rock have always been my go-to genres, mostly leaning towards rock.</description>
     </item>
     <item>
       <title>About me</title>

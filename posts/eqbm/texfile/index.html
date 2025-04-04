@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Sabarno Saha">
+<meta name="description" content="::: frame
+Introduction Stochastic Description
+Stochastic Processes
+Markov Chains
+CTMC
+Transition Rate Matrix
+Steady State and Equilibrium Distribution
+Conditions
+Detailed Balance Condition
+Perron Frobenius Theorem
+Irreducibility
+Strongly connected graphs
+Stationary State distribution :::
+::: frame
+Introduction(Contd.) Graph/ Network Theory
+Graphs
+Trees
+Handshaking lemma
+An &amp;quot;obvious&amp;quot; theorem
+Equilibrium Distribution :::
+A Stochastic Description ::: frame
+Stochastic Process ::: block Stochastic Process
+A stochastic process is a sequence of random variables where the indexing of the variables often carries the notion of time." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/posts/eqbm/texfile/" />
+
+
+    <title>
+        
+            Equilibrium Innit :: Welcome to the Octopus&#39; Garden  — Heya people, I am Sabarno Saha. Just here testing out my website
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.949191c1dcc9c4a887997048b240354e47152016d821198f89448496ba42e491.css" integrity="sha256-lJGRwdzJxKiHmXBIskA1TkcVIBbYIRmPiUSElrpC5JE=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Equilibrium Innit">
+  <meta itemprop="description" content="::: frame
+Introduction Stochastic Description
+Stochastic Processes
+Markov Chains
+CTMC
+Transition Rate Matrix
+Steady State and Equilibrium Distribution
+Conditions
+Detailed Balance Condition
+Perron Frobenius Theorem
+Irreducibility
+Strongly connected graphs
+Stationary State distribution :::
+::: frame
+Introduction(Contd.) Graph/ Network Theory
+Graphs
+Trees
+Handshaking lemma
+An &#34;obvious&#34; theorem
+Equilibrium Distribution :::
+A Stochastic Description ::: frame
+Stochastic Process ::: block Stochastic Process
+A stochastic process is a sequence of random variables where the indexing of the variables often carries the notion of time.">
+  <meta itemprop="datePublished" content="2025-04-04T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-04-04T00:00:00+00:00">
+  <meta itemprop="wordCount" content="2742">
+  <meta itemprop="image" content="http://localhost:1313/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/">
+  <meta name="twitter:title" content="Equilibrium Innit">
+  <meta name="twitter:description" content="::: frame
+Introduction Stochastic Description
+Stochastic Processes
+Markov Chains
+CTMC
+Transition Rate Matrix
+Steady State and Equilibrium Distribution
+Conditions
+Detailed Balance Condition
+Perron Frobenius Theorem
+Irreducibility
+Strongly connected graphs
+Stationary State distribution :::
+::: frame
+Introduction(Contd.) Graph/ Network Theory
+Graphs
+Trees
+Handshaking lemma
+An &#34;obvious&#34; theorem
+Equilibrium Distribution :::
+A Stochastic Description ::: frame
+Stochastic Process ::: block Stochastic Process
+A stochastic process is a sequence of random variables where the indexing of the variables often carries the notion of time.">
+
+
+
+    <meta property="og:url" content="http://localhost:1313/posts/eqbm/texfile/">
+  <meta property="og:site_name" content="Welcome to the Octopus&#39; Garden">
+  <meta property="og:title" content="Equilibrium Innit">
+  <meta property="og:description" content="::: frame
+Introduction Stochastic Description
+Stochastic Processes
+Markov Chains
+CTMC
+Transition Rate Matrix
+Steady State and Equilibrium Distribution
+Conditions
+Detailed Balance Condition
+Perron Frobenius Theorem
+Irreducibility
+Strongly connected graphs
+Stationary State distribution :::
+::: frame
+Introduction(Contd.) Graph/ Network Theory
+Graphs
+Trees
+Handshaking lemma
+An &#34;obvious&#34; theorem
+Equilibrium Distribution :::
+A Stochastic Description ::: frame
+Stochastic Process ::: block Stochastic Process
+A stochastic process is a sequence of random variables where the indexing of the variables often carries the notion of time.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-04T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/">
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-04-04 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                Octopus&#39; Garden</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/aotw">AoTW</a></li><li><a href="/posts">Blog</a></li><li><a href="/about">About me</a></li>
+        <div class="submenu">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">en</a>
+                <div class="dropdown-content">
+                    
+                </div>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+<main class="post">
+
+    <div class="post-info">
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-clock">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            13 minutes
+
+            
+        </p>
+    </div>
+
+    <article>
+        <h1 class="post-title">
+            <a href="http://localhost:1313/posts/eqbm/texfile/">Equilibrium Innit</a>
+        </h1>
+
+        
+
+        
+
+        
+
+        <div class="post-content">
+            <p>::: frame</p>
+<h3 id="introduction">Introduction</h3>
+<ol>
+<li>
+<p>Stochastic Description</p>
+<ul>
+<li>
+<p>Stochastic Processes</p>
+</li>
+<li>
+<p>Markov Chains</p>
+</li>
+<li>
+<p>CTMC</p>
+</li>
+<li>
+<p>Transition Rate Matrix</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Steady State and Equilibrium Distribution</p>
+<ul>
+<li>
+<p>Conditions</p>
+</li>
+<li>
+<p>Detailed Balance Condition</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Perron Frobenius Theorem</p>
+<ul>
+<li>
+<p>Irreducibility</p>
+</li>
+<li>
+<p>Strongly connected graphs</p>
+</li>
+<li>
+<p>Stationary State distribution
+:::</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>::: frame</p>
+<h3 id="introductioncontd">Introduction(Contd.)</h3>
+<ol start="5">
+<li>
+<p>Graph/ Network Theory</p>
+<ul>
+<li>
+<p>Graphs</p>
+</li>
+<li>
+<p>Trees</p>
+</li>
+<li>
+<p>Handshaking lemma</p>
+</li>
+<li>
+<p>An &quot;obvious&quot; theorem</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Equilibrium Distribution
+:::</p>
+</li>
+</ol>
+<h1 id="a-stochastic-description">A Stochastic Description</h1>
+<p>::: frame</p>
+<h3 id="stochastic-process">Stochastic Process</h3>
+<p>::: block
+Stochastic Process</p>
+<p>A stochastic process is a sequence of random variables where the
+indexing of the variables often carries the notion of time.
+:::</p>
+<p>An example would be Brownian Motion, which is described by the Wiener
+process.
+</p>
+$$P(\hat{W}(t+\Delta t)=x | \hat{W}(t)=x') = \frac{1}{\sqrt{2 \pi \Delta t}}\exp(-\frac{(x-x')^2}{2 \Delta t})$$
+<p>
+:::</p>
+<p>::: frame</p>
+<h3 id="markov-chains">Markov Chains</h3>
+<p>Most of the physical processes that we study in classical statistical
+physics is modelled as Markov Chains.</p>
+<p>::: block
+Markov Property Let ${X_n}$ be a stochastic process. The markov
+property is defined as
+</p>
+$$\mathbb{P}(X_{n+1}|X_n,X_{n-1},...,X_0) = \mathbb{P}(X_{n+1}|X_n)$$
+<p>
+Any stochastic process satisfying the Markov property is called a Markov
+Chain.
+:::</p>
+<p>Essentially the future of the system is independent of the past given
+the present state.
+:::</p>
+<p>::: frame</p>
+<h3 id="continuous-time-markov-chainsctmc">Continuous Time Markov Chains(CTMC)</h3>
+<p>These are markov chains with the index as time ${X(t)}_t$. Let us
+define a state space as the set of all values $S$ a random variable can
+assume. Then we use the notation </p>
+$$P(X(t) = s) \equiv P(s;t)$$
+<p> We can
+rewrite the markov property as
+</p>
+$$P(s_n;t_n|s_{n-1};t_{n-1},s_{n-2};t_{n-2},...,s_0;t_0) = P(s_n;t_n|s_{n-1};t_{n-1})$$
+<p>
+where $s,s_i \in S ~ \forall i$.</p>
+<p>Now using the theorem of total probability we can write the Chapman
+Kolmogorov equation as</p>
+<p>::: block
+Chapman Kolmogorov Equation
+</p>
+$$P(s;t|s_0;t_0) = \sum_{s' \in S} P(s;t|s';t')P(s';t'|s_0;t_0)$$
+<p> where
+$t &gt; t&rsquo; &gt; t_0$
+:::
+:::</p>
+<p>::: frame</p>
+<h3 id="continuous-time-markov-chainsctmc-1">Continuous Time Markov Chains(CTMC)</h3>
+<p>We now choose a time interval $dt$ and rewrite the Chapman Kolmogorov
+equation, dropping the explicit dependence on $x_0,t_0$
+</p>
+$$P(s;t+dt) = \sum_{s' \in S} P(s;t+dt|s';t)P(s';t)$$
+<p> Since this is an
+infinitesimal time interval, we can write the above equation as
+</p>
+$$P(s;t+dt|s';t) = \delta_{ss'} +Q_{ss'}dt + o(dt)$$
+<p> where $Q$ is the
+transition rate matrix.
+:::</p>
+<p>::: frame</p>
+<h3 id="transition-rate-matrix">Transition Rate Matrix</h3>
+<p>The transition rate matrix should satisfy the following conditions</p>
+<ol>
+<li>
+<p>$Q_{ss&rsquo;} \geq 0$ for $s \neq s'$</p>
+</li>
+<li>
+<p>$Q_{ss} = -\sum_{s&rsquo; \neq s} Q_{ss&rsquo;}$</p>
+</li>
+</ol>
+<p>The first condition ensures that the transition rate is non-negative and
+the second condition essentially ensures that the probability of
+transitioning from a state $s$ to any state is 1.</p>
+<p>Thus we can write </p>
+$$\mathbb{P}(t+dt) = \mathbb{I} + Qdt$$
+<p> where
+$\mathbb{I}$ is the identity matrix.
+:::</p>
+<p>::: frame</p>
+<h3 id="transition-rate-matrix-1">Transition Rate Matrix</h3>
+<p>We define $k_{xx&rsquo;}$ as the jump rate from state $x&rsquo;$ to $x$. We thus
+define the elements of the transition rate matrix as
+</p>
+$$p(x;t+dt|x';t' ) = Q_{xx'} = k_{xx'} \quad \quad x \neq x'$$
+<p> And the
+diagonal elements are thus given as
+</p>
+$$Q_{xx} = -\sum_{x' \neq x} k_{xx'}$$
+<p>We also assume that the elements $k_{xx&rsquo;}$ do not change with time.</p>
+<p>The change in probability of being in state $x$ at time $t$ is the
+<strong>inflow</strong> of probability from all other states which is
+$k_{xx&rsquo;}p(x&rsquo;;t)$ minus the <strong>outflow</strong> of probability $k_{x&rsquo;x}p(x;t)$.
+We can now write the master equation as
+</p>
+$$\dv{p(x;t)}{t} = \sum_{x' \in S} k_{xx'}p(x';t) - k_{x'x}p(x;t)$$
+<p> This
+becomes clearer when we define the probability current.
+:::</p>
+<p>::: frame</p>
+<h3 id="master-equations">Master Equations</h3>
+<p>These equations describe the time evolution of the system that are
+modelled as being in the a probabilistic combination of a set of states
+at any given time. These are phenomenologically modelled first order
+differential equations.</p>
+<p>These are used in a variety of fields in physics, and other related
+fields. These are used for studying birth and death processes,
+non-equilibrium statistical mechanics, chemical reactions, and a whole
+lot more.<br>
+The most common one that we see is the one used here is of the form
+</p>
+$$\frac{d \bold{p}}{ dt} = \mathbb{A}\bold{p}$$
+<p> where $\mathbb{A}$ is
+the matrix of connections and $\bold{p}$ is the probability distribution
+column vector.
+:::</p>
+<p>::: frame</p>
+<h3 id="probability-current">Probability Current</h3>
+<p>::: block
+Probability Current The probability current is defined as the flow of
+probability from state $x&rsquo;$ to state $x$. We define the probability
+current as </p>
+$$J_{xx'} = k_{xx'}p(x';t) - k_{x'x}p(x;t)$$
+<p>
+:::</p>
+<p>The master equation can now be written as
+</p>
+$$\dv{p(x;t)}{t} = \sum_{x' \in S} J_{xx'}$$
+<p>A bit of physics coming up ahead $:)$</p>
+<p>::: block
+Microscopic Reversibility If for any allowed jump
+$x \rightarrow x&rsquo;$(i.e. $k_{xx&rsquo;} &gt; 0$), the reverse jump
+$x&rsquo; \rightarrow x$ $(k_{x&rsquo;x}&gt;0)$ is also allowed, then the system is
+said to be microscopically reversible.
+:::
+:::</p>
+<p>::: frame</p>
+<h3 id="jump-networks">Jump Networks</h3>
+<p>These systems are quite often represented as jump networks, where the
+nodes of the graph represent the states $x$ and the arrows(edges)
+$x&rsquo; \rightarrow x$ represent the allowed jumps i.e. the jumps with
+non-zero transition rates($k_{xx&rsquo;}&gt;0$).</p>
+<p>::: block
+Some Physics The <strong>jump networks</strong> dealt with in physics are <strong>strongly
+connected</strong>. That is, given any two states $x$ and $x&rsquo;$, there is a
+non-zero probability of transitioning from $x$ to $x&rsquo;$ in a finite
+number of steps.
+:::</p>
+<p>This property has some physical justification. Coupled together with
+microscopic reversibility, this property ensures that the graphs aren&rsquo;t
+disconnected. Disconnected graphs often lead to systems with
+non-interacting components, which can be studied independently reducing
+to the strongly connected graph.<br>
+:::</p>
+<p>::: frame</p>
+<h3 id="jump-networks-1">Jump Networks</h3>
+<p><em>Strongly connected graphs also posses a property called Irreducibility.
+Irreducibility is a necessary condition for the Perron Frobenius theorem
+to hold.</em>
+:::</p>
+<p>::: frame</p>
+<h3 id="jump-networks-2">Jump Networks</h3>
+<p>Here are is an example of a jump network :</p>
+<p>![Source : [@PelitiPigolotti2023]](jump network.png){width=&ldquo;4in&rdquo;}
+:::</p>
+<h1 id="steady-state--equilibrium-distribution">Steady State &amp; Equilibrium Distribution</h1>
+<p>::: frame</p>
+<h3 id="conditions">Conditions</h3>
+<p>Steady state and equilibrium distribution are often used
+interchangeably. However, they are defined quite differently. The
+condition for a system to be in equilibrium is a bit more constrained
+than that of a steady state.</p>
+<p>The necessary condition for both to hold is that the probability of
+being in a state $x$ at time $t$ is independent of time. Thus,
+essentially our master equation equates to $0$.
+</p>
+$$\dv{p^{st}(x)}{t} = \sum_{x' \neq x} J_{xx'} = 0$$
+<p>We will show that under certain conditions, the system relaxes to a
+stationary state. </p>
+$$\lim_{t \to \infty} p(x;t) = p^{st}(x)$$
+<p>
+:::</p>
+<p>::: frame</p>
+<h3 id="detailed-balance-condition">Detailed Balance Condition</h3>
+<p>The independence of $p(x)$ on time can be ensured by the following
+conditions:</p>
+<ol>
+<li>
+<p>$\sum_{x&rsquo; \neq x} J_{xx&rsquo;} = 0$</p>
+</li>
+<li>
+<p>$J_{xx&rsquo;} = 0$ for all states $x,x'$</p>
+</li>
+</ol>
+<p>Condition 1 is the condition for a steady state, while condition 2 is
+the condition for equilibrium.</p>
+<p>::: block
+Detailed Balance Condition The detailed balance condition is defined as
+</p>
+$$k_{xx'}p^{st}(x') = k_{x'x}p^{st}(x) \quad  \forall ~x,x' \in S$$
+$$J_{xx'}  =0 \quad \forall x,x' \in S$$
+<p>
+:::</p>
+<p>When the jump networks satisfy the detailed balance condition, the
+system is said to be in equilibrium.
+:::</p>
+<h1 id="perron-frobenius-theorem">Perron Frobenius Theorem</h1>
+<p>::: frame</p>
+<h3 id="irreducibility">Irreducibility</h3>
+<p>::: block
+Reducibility A matrix $\mathbb{A}$ is said to be reducible when there
+exists a Permutation matrix $P$ such that </p>
+$$P^TAP = \begin{pmatrix}
+      \mathbb{X}& \mathbb{Y}\\
+      0 & \mathbb{Z}
+    \end{pmatrix}$$
+<p> where $\mathbb{X}$ and $\mathbb{Z}$ are square
+matrices.
+:::</p>
+<p>We can easily see that if all the elements of $\mathbb{A}$ are positive,
+then the matrix is irreducible. <em>This is a necessary condition for the
+Perron Frobenius theorem to hold.</em>
+:::</p>
+<p>::: frame</p>
+<h3 id="irreducibility-1">Irreducibility</h3>
+<p>We can reframe the Irreducibility problem in terms of graphs.</p>
+<p>::: block
+Irreducibility in terms of Graphs</p>
+<ul>
+<li>
+<p>The graph $G(\mathbb{A})$ of a matrix $\mathbb{A}<em>{n \times n}$ is a
+directed graph on $n$ nodes ${N_1,&hellip;,N_n}~$ in which there is a
+directed edge from $N_i$ to $N_j$ if and only if $A</em>{ij} \neq 0$.</p>
+</li>
+<li>
+<p>A graph $G(\mathbb{A})$ is called strongly connected if for every
+pair of nodes $N_i$ and $N_j$ there is a directed path from $N_i$ to
+$N_j$.</p>
+</li>
+<li>
+<p>A matrix $\mathbb{A}$ is irreducible iff the graph of the matrix is
+strongly connected.
+:::</p>
+</li>
+</ul>
+<p>We have already assumed that the jump network is strongly connected.
+:::</p>
+<p>::: frame</p>
+<h3 id="strongly-connected-graphs">Strongly Connected Graphs</h3>
+<p>We can also think of Irreducibility from the point of view of the markov
+chains. Two states are said to be <strong>communicating</strong> if there is a
+non-zero probability of transitioning from one state to the other in a
+finite number of steps. This is an equivalence relation and thus
+partitions the state space into equivalence classes.<br>
+The markov chain is said to be irreducible if there is only one
+equivalence class, which is the state space of the Markov chain.</p>
+<p>Here in our jump networks any state can be reached from any other state
+in a finite number of steps. Thus our markov chain is irreducible.
+:::</p>
+<p>::: frame</p>
+<h3 id="strongly-connected-graphs-1">Strongly Connected Graphs</h3>
+<p><img alt="Source : Wikipedia" src="/posts/eqbm/texfile/scc.png">{width=&ldquo;4in&rdquo;}
+:::</p>
+<p>::: frame</p>
+<h3 id="primitive-matrices">Primitive Matrices</h3>
+<p>::: block
+Primitive</p>
+<ul>
+<li>
+<p>A matrix $\mathbb{A}$ is called primitive if there exists a positive
+integer $k$ such that $\mathbb{A}^k$ is a positive matrix (i.e. all
+elements are positive).</p>
+</li>
+<li>
+<p>A matrix $\mathbb{A}$ is primitive if it has only one eigenvalue on
+the spectral circle.</p>
+</li>
+<li>
+<p>A non-negative irreducible matrix $\mathbb{A}$ is primitive with
+$r = \rho(\mathbb{A})$ iff
+$\lim_{k \to \infty} (\mathbb{A}\slash r)^k$ exists, in which case
+</p>
+$$\lim_{k \to \infty} \left(\frac{\mathbb{A}}{r}\right)^k = \frac{p q^{T}}{q^{T} p} > 0$$
+<p>
+where $p$ and $q$ are the Perron vectors for $\mathbb{A}$ and
+$\mathbb{A}^T$ respectively.
+:::
+:::</p>
+</li>
+</ul>
+<p>::: frame</p>
+<h3 id="the-perron-frobenius-theorem">The Perron Frobenius Theorem</h3>
+<p>::: block
+Perron Frobenius Theorem Let $\mathbb{A}$ be an irreducible matrix.</p>
+<ul>
+<li>
+<p>There exists a positive real number $\lambda$ such that
+</p>
+$$\mathbb{A}\pi = \lambda \pi$$
+<p> called the Perron-Frobenius
+eigenvalue. Moreover, the eigenvalue is the spectral radius of the
+matrix.</p>
+</li>
+<li>
+<p>The eigenspace corresponding to the Perron-Frobenius eigenvalue is
+one-dimensional, that is, the corresponding eigenvector is
+non-degenerate.</p>
+</li>
+<li>
+<p>Then there exists a unique probability vector $\pi$ such that
+</p>
+$$\mathbb{A}\pi =  \lambda \pi$$
+<p> called the Perron vector. Moreover,
+the vector $\pi$ is strictly positive.</p>
+</li>
+<li>
+<p>Furthermore, there are no non-negative eigenvectors of $\mathbb{A}$
+except for all positive multiples of $\pi$.
+:::
+:::</p>
+</li>
+</ul>
+<p>::: frame</p>
+<h3 id="stationary-state-distribution">Stationary State Distribution</h3>
+<p>::: block
+Stationary State Dist. Let $P$ be the transition probability matrix for
+an irreducible Markov chain and let $\pi$ be the perron vector for the
+matrix $P$.</p>
+<ul>
+<li>
+<p>The kth step probability matrix is given by $P^k$ since the
+$(i,j)$th entry of $P^k$ is the probability of transitioning from
+state $j$ to state $i$ in exactly $k$ steps.</p>
+</li>
+<li>
+<p>The $k$the step distribution is given by $p(k) = P^k p(0)$</p>
+</li>
+<li>
+<p>If $\bold{P}$ is primitive and if $e$ denotes the column of all
+ones, then the limit
+</p>
+$$\lim_{k \to \infty} \bold{P}^k = \pi e^T \quad \quad \quad \text{and} \quad \quad
+               \lim_{k \to \infty} p(k) = \pi$$
+<p>
+:::
+:::</p>
+</li>
+</ul>
+<p>::: frame</p>
+<h3 id="stationary-state-distribution-1">Stationary State Distribution</h3>
+<p>[<strong>Proof:</strong> ]{.underline}<br>
+All stochastic matrices $\bold{P}$ have a spectral radius
+$\rho(\bold{P}) =1$. All column sums equal to 1. Thus, $e$ is an
+eigenvector of $\bold{P}^T$ with eigenvalue $1$, where $e$ is the column
+vector with all ones in its entries. We also have
+$\norm{\bold{P}}_{1} = 1$. Using the fact that
+$\rho(\star) \leq \norm{\star}$ for every matrix norm(See [@Meyer2000]),
+we get that
+</p>
+$$1 \leq \rho(\bold{P}) \leq \norm{\bold{P}}_{1} = 1 ~~~ \Rightarrow \rho (\bold{P}) =1$$
+<p>We know that $\bold{P}$ is primitive with $\rho(\bold{P}) = 1$, we know
+that </p>
+$$\lim_{k \to \infty} \bold{P}^k = \frac{p q^T}{q^T p}$$
+<p> where $p$
+and $q$ are the perron vectors for $\bold{P}$ and $\bold{P}^T$
+respectively. The perron vector for $\bold{P}^T$ is $e$ and let the
+perron vector for $\bold{P}$ be $\pi$.
+:::</p>
+<p>::: frame</p>
+<h3 id="stationary-state-distribution-2">Stationary State Distribution</h3>
+<p>We thus have,
+</p>
+$$\lim_{k \to \infty} \bold{P}^k = \frac{\pi e^T}{e^T \pi}$$
+<p> From the
+conservation of probability we have that $\sum_i \pi_i =1$, we have that
+$e^T\pi = \sum_i \pi_i = 1$.Thus we have
+</p>
+$$\lim_{k \to \infty} \bold{P}^k = \pi e^T$$
+<p> Now we have
+</p>
+$$\lim_{k \to \infty} p(k) = (\lim_{k \to \infty} \bold{P}^k) p(0)= \pi e^Tp(0)$$
+<p>
+Again $e^Tp(0) = \sum_i p_i(0) = 1$. This leads to
+</p>
+$$\lim_{k \to \infty} p(k) = \pi$$
+<p>Note that the stationary limit is independent of the initial
+distribution $p(0)$ here.
+:::</p>
+<p>::: frame</p>
+<h3 id="stationary-state-distribution-3">Stationary State Distribution</h3>
+<p>We now actually verify that $\pi$ is indeed the stationary distribution.
+Let us recast the master equation into matrix form.
+</p>
+$$\frac{d p(t)}{dt} = Q p(t) = \frac{1}{dt}(\bold{P}- \mathbb{I}) p(t)$$
+<p>
+where $Q$ is the transition rate matrix. Now we have
+</p>
+$$(\bold{P}- \mathbb{I})\pi = \bold{P}\pi - \pi = \pi -\pi = 0$$
+<p> Thus
+the infinite time limit of the probability distribution is indeed the
+stationary distribution. </p>
+$$\Rightarrow  \frac{d \pi }{dt} = 0$$
+<p>Now the stationary distribution must be unique since the Perron root of
+any irreducible matrix has a one dimensional eigenspace. Thus the
+eigenvector must be unique due to the conservation of probability.
+:::</p>
+<p>::: frame</p>
+<h3 id="stationary-state-distribution-4">Stationary state Distribution</h3>
+<p>SIDE NOTE: After completing the presentation, I found a proof that
+doesn&rsquo;t use Perron Frobenius theorem. However, that only proves it for a
+transition rate matrix with all positive entries.[@PelitiPigolotti2023]
+:::</p>
+<p>::: frame</p>
+<h3 id="stationary-state-distribution-5">Stationary state Distribution</h3>
+<p>::: block
+Stationary State Dist. for Imprimitive matrices Let $P$ be the
+transition probability matrix for an irreducible Markov chain and let
+$\pi$ be the perron vector for the matrix $P$.</p>
+<ul>
+<li>
+<p>If $\bold{P}$ is imprimitive and if $e$ denotes the column of all
+ones, then the limit
+</p>
+$$\lim_{k \to \infty} \frac{\mathbb{I} + \bold{P}+ ... +\bold{P}^{k-1}}{k} = \pi e^T$$
+<p>
+and</p>
+$$\lim_{k \to \infty} \frac{p(0) + p(1) + ...+p(k-1)}{k} = \pi$$
+<p>
+:::</p>
+</li>
+</ul>
+<p>We use Cesaro sums to define the stationary state probability
+distribution. However, we won&rsquo;t deal with it here.
+:::</p>
+<h1 id="graph-theory">Graph Theory</h1>
+<p>::: frame</p>
+<h3 id="preliminaries">Preliminaries</h3>
+<ul>
+<li>
+<p>A graph is a collection of vertices and edges. The edges connect the
+vertices.</p>
+</li>
+<li>
+<p>The degree of a vertex is the number of edges connected to it.</p>
+</li>
+<li>
+<p>A walk is a sequence of vertices connected by edges.</p>
+</li>
+<li>
+<p>A trail is a walk with no repeated edges.</p>
+</li>
+<li>
+<p>A cycle is a non-empty trail that starts and ends at the same
+vertex.</p>
+</li>
+<li>
+<p>A connected graph is a graph where there is a path between every
+pair of vertices.
+:::</p>
+</li>
+</ul>
+<p>::: frame</p>
+<h3 id="trees">Trees</h3>
+<p>::: block
+Trees A tree is a connected graph with no cycles.
+:::</p>
+<p>Here is one property of a tree that we plan to use later.<br>
+A tree with $n$ vertices has $n-1$ edges.
+:::</p>
+<p>::: frame</p>
+<h3 id="handshaking-lemma">Handshaking Lemma</h3>
+<p>::: block
+Handshaking Lemma The sum of the degrees of all the vertices of a graph
+is equal to twice the number of edges.<br>
+</p>
+$$\sum_{i=1}^{n} d_i = 2|E|$$
+<p> where $d_i$ is the degree of the $i$th
+vertex and $|E|$ is the number of edges.
+:::
+:::</p>
+<p>::: frame</p>
+<h3 id="an-obvious-theorem">An &quot;obvious&quot; Theorem</h3>
+<p>::: block
+An &quot;obvious&quot; Theorem A tree has at least two vertices of degree 1.
+:::</p>
+<p>[<strong>Proof</strong>]{.underline}<br>
+Every tree has $n-1$ edges, so the sum of the degrees of all vertices of
+any tree has to be $2(n-1)$. But if there are fewer than two vertices of
+degree one, then the sum of the degrees of all vertices must be at least
+$2(n-1)+1$, which is a contradiction.
+:::</p>
+<h1 id="equilibrium-distribution">Equilibrium Distribution</h1>
+<p>::: frame</p>
+<h3 id="trees-1">Trees</h3>
+<p>::: block
+Equilibrium dist. for trees Let the jump network be a tree. Then the
+stationary state distribution is the equilibrium distribution.
+:::</p>
+<p>[<strong>Proof</strong>]{.underline}<br>
+We know that there exists at least $2$ vertices with degree $1$. Let us
+label one of them as $x$. Thus, for this vertex
+$\sum_{x&rsquo; \neq x} J_{xx&rsquo;} = 0$ for all states $x&rsquo;$ connected to it,
+under the stationary distribution. Since this is only connected to
+another vertex say $a$, We have $J_{xa} = 0$. We can then remove the
+vertex $x$ and the edge ${x,a}$. This is still a tree, so we can do
+this iteratively. We can reach a point where we have only one vertex
+left. For the lone vertex, the detailed balance condition is trivially
+satisfied. Thus, the equilibrium distribution is the stationary
+distribution.
+:::</p>
+<p>::: frame</p>
+<h3 id="cyclic-networks">Cyclic Networks</h3>
+<p>::: block
+Cyclic Network A cyclic network is a graph with a cycle in it.
+:::</p>
+<p>::: block
+Cyclic Networks For cyclic networks, the system admits an equilibrium
+distribution if for any sequence states $(x_0,&hellip;,x_n)$ all different
+from each other
+</p>
+$$k_{x_0x_1}k_{x_1x_2}...k_{x_{n-1}x_n}k_{x_nx_0} = k_{x_0x_n}k_{x_nx_{n-1}}...k_{x_1x_0}$$
+<p>
+:::</p>
+<p>We can see that non-vanishing stationary currents can only survive in
+loops. If we allow for all cycles the forward and back jump rates to be
+equal, we can then allow for the balance of probability currents.
+:::</p>
+<p>::: frame</p>
+<h3 id="note">Note</h3>
+<p>::: block
+Admission of Equilibrium Distribution For cyclic networks, the system
+admits an equilibrium distribution if for any sequence states
+$(x_0,&hellip;,x_n)$ all different from each other
+</p>
+$$k_{x_0x_1}k_{x_1x_2}...k_{x_{n-1}x_n}k_{x_nx_0} = k_{x_0x_n}k_{x_nx_{n-1}}...k_{x_1x_0}$$
+<p>
+:::</p>
+<p>Note that this also includes the acyclic cases as well. For all
+sequences $(x_0,&hellip;,x_n)$ that is not a cycle with $x_0$ we get
+$k_{x_0 x_n} = k_{x_n x_0} = 0$. Thus, this condition is trivially
+satisfied for acyclic networks.
+:::</p>
+<p>::: frame
+Questions?
+:::</p>
+<h1 id="danke-schön">Danke Schön</h1>
+<p>::: frame</p>
+<h3 id="references">References</h3>
+<p>::: thebibliography
+99</p>
+<p>Luca Peliti and Simone Pigolotti, <em>Stochastic Thermodynamics</em>, Princeton
+University Press, Princeton, NJ, 2023.</p>
+<p>Carl D. Meyer, <em>Applied Linear Algebra and Matrix Analysis</em>, Society for
+Industrial and Applied Mathematics (SIAM), Philadelphia, PA, 2000.
+:::
+:::</p>
+
+        </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+        
+        
+
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-file-text">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            2742 Words
+        </p>
+
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-calendar">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            
+            2025-04-04 05:30
+            
+
+            
+            
+            
+        </p>
+    </div>
+    <hr />
+    <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Equilibrium%20Innit&amp;caption=Equilibrium%20Innit&amp;canonicalUrl=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Equilibrium%20Innit&amp;body=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f&amp;media=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f;description=Equilibrium%20Innit" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f&amp;title=Equilibrium%20Innit&amp;summary=Equilibrium%20Innit&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f&amp;resubmit=true&amp;title=Equilibrium%20Innit" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f;title=Equilibrium%20Innit" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Equilibrium%20Innit%20http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f&amp;t=Equilibrium%20Innit" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Equilibrium%20Innit&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2feqbm%2ftexfile%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+    </div>
+
+    
+    <div class="pagination">
+        
+        <div class="pagination__title">
+            <span class="pagination__title-h">Read other posts</span>
+            <hr />
+        </div>
+        
+
+        <div class="pagination__buttons">
+            
+
+            
+            <span class="button next">
+                <a href="http://localhost:1313/posts/mobius/mobius/">
+                    <span class="button__text">The Mobius Strip</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+    
+
+</main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+
+
+
+
+    </body>
+</html>

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Sabarno Saha">
 <meta name="description" content="Introduction This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University. The slides for which were made in LaTeX using beamer and can be found here, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. The blog aims to demonstrate how to deal with statistically large systems(systems with a large number of degrees of freedom) and the conditions under which they might attain equilibrium." />
-<meta name="keywords" content="homepage, blog" />
+<meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="https://theinvisiblefoe.github.io/posts/eqbm/" />
@@ -40,7 +40,7 @@
   <meta itemprop="description" content="Introduction This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University. The slides for which were made in LaTeX using beamer and can be found here, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. The blog aims to demonstrate how to deal with statistically large systems(systems with a large number of degrees of freedom) and the conditions under which they might attain equilibrium.">
   <meta itemprop="datePublished" content="2025-04-04T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-04-04T00:00:00+00:00">
-  <meta itemprop="wordCount" content="3195">
+  <meta itemprop="wordCount" content="3253">
   <meta itemprop="image" content="https://theinvisiblefoe.github.io/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -142,7 +142,7 @@
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-            15 minutes
+            16 minutes
 
             
         </p>
@@ -265,10 +265,10 @@ process.
 physics is modelled as Markov Chains.</p>
 <div class="callout info">
   <div class="callout-content">
-    <strong>Stochastic Process</strong>
+    <strong>Markov Property</strong>
     <p>
 
-Markov Property Let \(\{X_n\}\) be a stochastic process. The markov
+Let \(\{X_n\}\) be a stochastic process. The markov
 property is defined as
 \[\mathbb{P}(X_{n+1}|X_n,X_{n-1},...,X_0) = \mathbb{P}(X_{n+1}|X_n)\]
 Any stochastic process satisfying the Markov property is called a Markov
@@ -483,7 +483,7 @@ diagonal elements are thus given as
 \(k_{xx'}p(x';t)\) minus the <strong>outflow</strong> of probability \(k_{x'x}p(x;t)\).
 We can now write the master equation as
 </p>
-\[\dv{p(x;t)}{t} = \sum_{x' \in S} k_{xx'}p(x';t) - k_{x'x}p(x;t)\]
+\[\frac{\partial p(x;t)}{\partial t} = \sum_{x' \in S} k_{xx'}p(x';t) - k_{x'x}p(x;t)\]
 <p> This
 becomes clearer when we define the probability current.</p>
 <h3 id="master-equations">Master Equations</h3>
@@ -585,7 +585,7 @@ current as \[J_{xx'} = k_{xx'}p(x';t) - k_{x'x}p(x;t)\]
 
 <p>The master equation can now be written as
 </p>
-\[\dv{p(x;t)}{t} = \sum_{x' \in S} J_{xx'}\]
+\[\frac{\partial p(x;t)}{\partial t} = \sum_{x' \in S} J_{xx'}\]
 <p>A bit of physics coming up ahead \(:)\)</p>
 <div class="callout info">
   <div class="callout-content">
@@ -678,8 +678,8 @@ non-zero transition rates(\(k_{xx'}>0\)).</p>
   <div class="callout-content">
     <strong>Some Physics</strong>
     <p>
- The **jump networks** dealt with in physics are **strongly
-connected**. That is, given any two states \(x\) and \(x'\), there is a
+ The jump networks dealt with in physics are strongly
+connected. That is, given any two states \(x\) and \(x'\), there is a
 non-zero probability of transitioning from \(x\) to \(x'\) in a finite
 number of steps.
 </p>
@@ -759,14 +759,14 @@ number of steps.
 microscopic reversibility, this property ensures that the graphs aren&rsquo;t
 disconnected. Disconnected graphs often lead to systems with
 non-interacting components, which can be studied independently reducing
-to the strongly connected graph.\</p>
+to the strongly connected graph.</p>
 <h3 id="jump-networks-1">Jump Networks</h3>
 <p><em>Strongly connected graphs also posses a property called Irreducibility.
 Irreducibility is a necessary condition for the Perron Frobenius theorem
 to hold.</em></p>
 <h3 id="jump-networks-2">Jump Networks</h3>
 <p>Here are is an example of a jump network :</p>
-<p>![Source : [1]](jump network.png){width=&ldquo;4in&rdquo;}</p>
+<p><img alt="Source : [1]" src="/posts/eqbm/jumpnetwork.png"></p>
 <h1 id="steady-state--equilibrium-distribution">Steady State &amp; Equilibrium Distribution</h1>
 <h3 id="conditions">Conditions</h3>
 <p>Steady state and equilibrium distribution are often used
@@ -777,7 +777,7 @@ than that of a steady state.</p>
 being in a state \(x\) at time \(t\) is independent of time. Thus,
 essentially our master equation equates to \(0\).
 </p>
-\[\dv{p^{st}(x)}{t} = \sum_{x' \neq x} J_{xx'} = 0\]
+\[\frac{\partial p^{st}(x)}{\partial t} = \sum_{x' \neq x} J_{xx'} = 0\]
 <p>We will show that under certain conditions, the system relaxes to a
 stationary state. </p>
 \[\lim_{t \to \infty} p(x;t) = p^{st}(x)\]
@@ -1068,7 +1068,7 @@ equivalence class, which is the state space of the Markov chain.</p>
 <p>Here in our jump networks any state can be reached from any other state
 in a finite number of steps. Thus our markov chain is irreducible.</p>
 <h3 id="strongly-connected-graphs-1">Strongly Connected Graphs</h3>
-<p><img alt="Source : Wikipedia" src="/posts/eqbm/scc.png">{width=&ldquo;4in&rdquo;}</p>
+<p><img alt="Source : Wikipedia" src="/posts/eqbm/scc.png"></p>
 <h3 id="primitive-matrices">Primitive Matrices</h3>
 <div class="callout info">
   <div class="callout-content">
@@ -1078,18 +1078,17 @@ in a finite number of steps. Thus our markov chain is irreducible.</p>
 
 -   A matrix \(\mathbb{A}\) is called primitive if there exists a positive
     integer \(k\) such that \(\mathbb{A}^k\) is a positive matrix (i.e. all
-    elements are positive).
+    elements are positive).<br>
 
 -   A matrix \(\mathbb{A}\) is primitive if it has only one eigenvalue on
-    the spectral circle.
+    the spectral circle.<br>
 
 -   A non-negative irreducible matrix \(\mathbb{A}\) is primitive with
     \(r = \rho(\mathbb{A})\) iff
-    \(\lim_{k \to \infty} (\mathbb{A}\slash r)^k\) exists, in which case
+    \(\lim_{k \rightarrow \infty} \)\((\mathbb{A} / r)^k\) exists, in which case
     \[\lim_{k \to \infty} \left(\frac{\mathbb{A}}{r}\right)^k = \frac{p q^{T}}{q^{T} p} > 0\]
     where \(p\) and \(q\) are the Perron vectors for \(\mathbb{A}\) and
-    \(\mathbb{A}^T\) respectively.
-
+    \(\mathbb{A}^T\) respectively.<br>
 
 </p>
   </div>
@@ -1169,20 +1168,20 @@ in a finite number of steps. Thus our markov chain is irreducible.</p>
   <div class="callout-content">
     <strong>Perron Frobenius Theorem</strong>
     <p>
- Let \(\mathbb{A}\) be an irreducible matrix.
+ Let \(\mathbb{A}\) be an irreducible matrix.<br>
 
 -   There exists a positive real number \(\lambda\) such that
     \[\mathbb{A}\pi = \lambda \pi\] called the Perron-Frobenius
     eigenvalue. Moreover, the eigenvalue is the spectral radius of the
-    matrix.
+    matrix.<br>
 
 -   The eigenspace corresponding to the Perron-Frobenius eigenvalue is
     one-dimensional, that is, the corresponding eigenvector is
-    non-degenerate.
+    non-degenerate. <br>
 
 -   Then there exists a unique probability vector \(\pi\) such that
     \[\mathbb{A}\pi =  \lambda \pi\] called the Perron vector. Moreover,
-    the vector \(\pi\) is strictly positive.
+    the vector \(\pi\) is strictly positive.<br>
 
 -   Furthermore, there are no non-negative eigenvectors of \(\mathbb{A}\)
     except for all positive multiples of \(\pi\).
@@ -1372,7 +1371,6 @@ that </p>
 and \(q\) are the perron vectors for \(\bold{P}\) and \(\bold{P}^T\)
 respectively. The perron vector for \(\bold{P}^T\) is \(e\) and let the
 perron vector for \(\bold{P}\) be \(\pi\).</p>
-<h3 id="stationary-state-distribution-2">Stationary State Distribution</h3>
 <p>We thus have,
 </p>
 \[\lim_{k \to \infty} \bold{P}^k = \frac{\pi e^T}{e^T \pi}\]
@@ -1390,7 +1388,6 @@ Again \(e^Tp(0) = \sum_i p_i(0) = 1\). This leads to
 \[\lim_{k \to \infty} p(k) = \pi\]
 <p>Note that the stationary limit is independent of the initial
 distribution \(p(0)\) here.</p>
-<h3 id="stationary-state-distribution-3">Stationary State Distribution</h3>
 <p>We now actually verify that \(\pi\) is indeed the stationary distribution.
 Let us recast the master equation into matrix form.
 </p>
@@ -1406,11 +1403,10 @@ stationary distribution. </p>
 <p>Now the stationary distribution must be unique since the Perron root of
 any irreducible matrix has a one dimensional eigenspace. Thus the
 eigenvector must be unique due to the conservation of probability.</p>
-<h3 id="stationary-state-distribution-4">Stationary state Distribution</h3>
+\[ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \square\]
 <p>SIDE NOTE: After completing the presentation, I found a proof that
 doesn&rsquo;t use Perron Frobenius theorem. However, that only proves it for a
 transition rate matrix with all positive entries.[1]</p>
-<h3 id="stationary-state-distribution-5">Stationary state Distribution</h3>
 <div class="callout info">
   <div class="callout-content">
     <strong>Stationary State Dist.</strong>
@@ -2123,8 +2119,11 @@ admits an equilibrium distribution if for any sequence states
 sequences \((x_0,...,x_n)\) that is not a cycle with \(x_0\) we get
 \(k_{x_0 x_n} = k_{x_n x_0} = 0\). Thus, this condition is trivially
 satisfied for acyclic networks.</p>
-<p>Questions?</p>
-<h1 id="danke-schön">Danke Schön</h1>
+<h1 id="thats-all-folks">That&rsquo;s all folks</h1>
+<p>Somehow in all of this quite convoluted and somewhat fun maths is the physical result that we can attain equilibrium under certain conditions.
+This has been the quite abrupt end of my first blog. I never know how to end, so I&rsquo;ll end on an unoriginal quote that makes absolutely zero sense in this context.</p>
+<pre tabindex="0"><code>            He who has the biscuits gets to tell the story.
+</code></pre><h1 id="danke-schön">Danke Schön</h1>
 <p><em>Feel free to direct your feddback and curses to my email: <a href="mailto:iamsabarno@egmail.com">iamsabarno@gmail.com</a></em></p>
 <h3 id="references">References</h3>
 <p>[1] : Luca Peliti and Simone Pigolotti, Stochastic Thermodynamics, Princeton University Press, Princeton, NJ, 2023.</p>
@@ -2155,7 +2154,7 @@ satisfied for acyclic networks.</p>
                 <line x1="16" y1="17" x2="8" y2="17"></line>
                 <polyline points="10 9 9 9 8 9"></polyline>
             </svg>
-            3195 Words
+            3253 Words
         </p>
 
         <p>

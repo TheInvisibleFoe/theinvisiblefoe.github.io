@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AoTW on Welcome to the Octopus&#39; Garden</title>
-    <link>https://theinvisiblefoe.github.io/aotw/</link>
+    <link>http://localhost:1313/aotw/</link>
     <description>Recent content in AoTW on Welcome to the Octopus&#39; Garden</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://theinvisiblefoe.github.io/aotw/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/aotw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>https://theinvisiblefoe.github.io/aotw/intro/</link>
+      <link>http://localhost:1313/aotw/intro/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://theinvisiblefoe.github.io/aotw/intro/</guid>
+      <guid>http://localhost:1313/aotw/intro/</guid>
       <description>I listen to music now and then and then some more. Now and then I get stuck into a vicious listening cycle, where I listen to same songs over and over again. In an attempt to increase and diversify my music tastes, I have been listening to a new album every week and I’ll try to jot down my feelings here.&#xA;Pop and rock have always been my go-to genres, mostly leaning towards rock.</description>
     </item>
   </channel>

@@ -17,11 +17,11 @@
       <description>Introduction This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University. The slides for which were made in LaTeX using beamer and can be found here, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. The blog aims to demonstrate how to deal with statistically large systems(systems with a large number of degrees of freedom) and the conditions under which they might attain equilibrium.</description>
     </item>
     <item>
-      <title>Introduction</title>
-      <link>https://theinvisiblefoe.github.io/aotw/intro/</link>
-      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://theinvisiblefoe.github.io/aotw/intro/</guid>
-      <description>I listen to music now and then and then some more. Now and then I get stuck into a vicious listening cycle, where I listen to same songs over and over again. In an attempt to increase and diversify my music tastes, I have been listening to a new album every week and I’ll try to jot down my feelings here.&#xA;Pop and rock have always been my go-to genres, mostly leaning towards rock.</description>
+      <title></title>
+      <link>https://theinvisiblefoe.github.io/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://theinvisiblefoe.github.io/links/</guid>
+      <description>Stuff The page,as the name suggests is just a literal stockpile of stuff. This page contains links to some interesting stuff, to notes from my classes at IISER-K and a cornucopia of topics all unrelated to each other.&#xA;Handouts: The professors here provide material to supplement their course. The material covers course notes to tutorials and assignments and their solutions. The institute uses WeLearn built on moodle to manage courses. There is a cli-tool that allows you to download all the files instructors have uploaded over Welearn and download it locally.</description>
     </item>
     <item>
       <title>About me</title>

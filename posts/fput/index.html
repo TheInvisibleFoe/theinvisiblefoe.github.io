@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Sabarno Saha">
+<meta name="description" content="History In light of the new MANIAC(Metropolis and von Neumann Install Awful Computers) computer, Fermi, Pasta, Ulam, and Tsingou[@FPU] set out to study some physical problem using numerical simulations. They chose to study a 1D chain of particles connected by nonlinear springs. Their goal was to understand how energy would distribute among the normal modes of the system over time, expecting that the nonlinearity would lead to thermalization and equipartition of energy among the modes.
+" />
+<meta name="keywords" content="homepage, blog" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://theinvisiblefoe.github.io/posts/fput/" />
+
+
+    <title>
+        
+            FPUT :: Welcome to the Octopus&#39;s Garden  — Heya people, I am Sabarno Saha. Just here testing out my website
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.0d64a94b185560f386452067ccb959858b31398d7e240bf43eadfae537901ea0.css" integrity="sha256-DWSpSxhVYPOGRSBnzLlZhYsxOY1&#43;JAv0Pq365TeQHqA=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="FPUT">
+  <meta itemprop="description" content="History In light of the new MANIAC(Metropolis and von Neumann Install Awful Computers) computer, Fermi, Pasta, Ulam, and Tsingou[@FPU] set out to study some physical problem using numerical simulations. They chose to study a 1D chain of particles connected by nonlinear springs. Their goal was to understand how energy would distribute among the normal modes of the system over time, expecting that the nonlinearity would lead to thermalization and equipartition of energy among the modes.">
+  <meta itemprop="datePublished" content="2025-12-26T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-26T00:00:00+00:00">
+  <meta itemprop="wordCount" content="4866">
+  <meta itemprop="image" content="https://theinvisiblefoe.github.io/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://theinvisiblefoe.github.io/">
+  <meta name="twitter:title" content="FPUT">
+  <meta name="twitter:description" content="History In light of the new MANIAC(Metropolis and von Neumann Install Awful Computers) computer, Fermi, Pasta, Ulam, and Tsingou[@FPU] set out to study some physical problem using numerical simulations. They chose to study a 1D chain of particles connected by nonlinear springs. Their goal was to understand how energy would distribute among the normal modes of the system over time, expecting that the nonlinearity would lead to thermalization and equipartition of energy among the modes.">
+
+
+
+    <meta property="og:url" content="https://theinvisiblefoe.github.io/posts/fput/">
+  <meta property="og:site_name" content="Welcome to the Octopus&#39;s Garden">
+  <meta property="og:title" content="FPUT">
+  <meta property="og:description" content="History In light of the new MANIAC(Metropolis and von Neumann Install Awful Computers) computer, Fermi, Pasta, Ulam, and Tsingou[@FPU] set out to study some physical problem using numerical simulations. They chose to study a 1D chain of particles connected by nonlinear springs. Their goal was to understand how energy would distribute among the normal modes of the system over time, expecting that the nonlinearity would lead to thermalization and equipartition of energy among the modes.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-26T00:00:00+00:00">
+    <meta property="og:image" content="https://theinvisiblefoe.github.io/">
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-12-26 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+  
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css"
+  integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi"
+  crossorigin="anonymous"
+>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js"
+  integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ"
+  crossorigin="anonymous">
+</script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);">
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '\\[', right: '\\]', display: true},   
+        {left: '$$', right: '$$', display: true},     
+        {left: '\\(', right: '\\)', display: false},  
+      ],
+      throwOnError : false
+    });
+  });
+</script>
+
+  
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                Octopus&#39;s Garden</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner">
+                <li><a href="/about">About me</a></li>
+            
+                <li><a href="/posts">Blog</a></li>
+            
+                <li><a href="/links">Stuff</a></li>
+            
+        <ul class="submenu">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">en</a>
+                <div class="dropdown-content">
+                </div>
+            </li>
+        </ul>
+    </ul>
+</nav>
+
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            
+  <div class="content">
+    <main class="post">
+
+      <div class="post-info">
+        <p>
+
+          
+        </p>
+      </div>
+
+      <article>
+        <h1 class="post-title">
+          <a href="https://theinvisiblefoe.github.io/posts/fput/">FPUT</a>
+        </h1>
+
+        
+
+        
+
+        
+
+        <div class="post-content">
+          <h1 id="history">History</h1>
+<!-- raw HTML omitted -->
+<p>In light of the new MANIAC(Metropolis and von Neumann Install Awful
+Computers) computer, Fermi, Pasta, Ulam, and Tsingou[@FPU] set out to
+study some physical problem using numerical simulations. They chose to
+study a 1D chain of particles connected by nonlinear springs. Their goal
+was to understand how energy would distribute among the normal modes of
+the system over time, expecting that the nonlinearity would lead to
+thermalization and equipartition of energy among the modes.</p>
+<p>We first introduce the FPUT problem and its original expectations. Then
+we will gloss over the backdrop of hamiltonian systems and ergodicity.
+Finally, we will discuss the surprising results. Then we try to answer
+some questions that arise from the problem. Then we try to see some
+possible solutions to the problem. Finally, we connect the richness of
+this problem with statistical mechanics. For this, we will use
+[5] and [1] as our main references.</p>
+<h1 id="problem-setup">Problem Setup</h1>
+<p>The FPUT problem considers a one-dimensional chain of \(N\) particles
+connected by springs with linear and nonlinear restoring forces. The
+Hamiltonian is as follows:
+</p>
+\[H = \sum_{i=1}^{N} \frac{p_i^2}{2} + \sum_{i=1}^{N} \left( \frac{1}{2} (x_{i+1} - x_i)^2 + \frac{\alpha}{3} (x_{i+1} - x_i)^3 + \frac{\beta}{4} (x_{i+1} - x_i)^4 \right)\]<p>
+where \(p_i\) is the momentum of the \(i^{th}\) particle, \(x_i\) is its
+position, and \(\alpha, \beta\) are the coefficients for the nonlinear
+terms. The boundary conditions are fixed at both ends:
+\(x_0 = x_{N+1} = 0\). The equations of motion derived from the
+Hamiltonian are given by: </p>
+\[\begin{align*}
+        \frac{d^2 x_i}{dt^2} = (x_{i+1} - 2x_i + x_{i-1}) + \alpha \left( (x_{i+1} - x_i)^2 - (x_i - x_{i-1})^2 \right) 
+        + \beta \left( (x_{i+1} - x_i)^3 - (x_i - x_{i-1})^3 \right)
+\end{align*}\]<p> for \(i = 1, 2, \ldots, N\), with appropriate boundary
+conditions.</p>
+<h2 id="normal-modes">Normal Modes</h2>
+<p>For the linear Hamiltonian \((H_0)\) , we can express the displacements in
+terms of the normal mode coordinates \(Q_k\):
+</p>
+\[Q_k(t) = \sqrt{\frac{2}{N+1}} \sum_{j=1}^{N} x_j(t) \sin\left(\frac{\pi k j}{N+1}\right)\]<p>
+where \(k = 1, 2, \ldots, N\). Each normal mode oscillates with its own
+frequency \(\omega_k\):
+</p>
+\[\omega_k = 2 \sin\left(\frac{\pi k}{2(N+1)}\right)\]<p> The normal mode
+coordinates are easily found using the Fourier expansion and plugging in
+the appropriate boundary conditions. Using the normal mode coordinates,
+the equations of motion for the linear system can be written as:
+</p>
+\[\ddot{Q}_k + \omega_k^2 Q_k = 0\]<p> with the \(k^{th}\) mode energy given
+by: </p>
+\[E_k = \frac{1}{2} \dot{Q}_k^2 + \frac{1}{2} \omega_k^2 Q_k^2\]<p>
+Thus, we can decouple the oscillators in the linear case. No energy
+exchange between modes. The original Hamiltonian with linear springs
+\((H_0)\) would lead to normal modes of vibration, each with a specific
+frequency. The expectation was that the addition of nonlinear
+terms\((H_1)\) with perturbation, either \(\alpha\) or \(\beta\), would cause
+the energy to spread out among these modes over time, leading to
+thermalization and equipartition of energy.</p>
+<p>For the \(\alpha\) model, the equations of motion in terms of normal modes
+become:
+</p>
+\[\ddot{Q}_k + \omega_k^2 Q_k = -\frac{\alpha}{\sqrt{2(N+1)}} \sum_{j,l=1}^{N} C_{j l k} Q_j Q_l Q_m\]<p>
+where \(C_{j l k}\) are coupling coefficients that depend on the mode
+indices. Similarly, for the \(\beta\) model, we have:
+</p>
+\[\ddot{Q}_k + \omega_k^2 Q_k = -\frac{\beta}{2(N+1)} \sum_{j,l,m=1}^{N} D_{j l m k} Q_j Q_l Q_m Q_n\]<p>
+where \(D_{j l m k}\) are the corresponding coupling coefficients.</p>
+<h1 id="a-classical-mechanics-refresher">A Classical Mechanics Refresher</h1>
+<p>A constant of motion is a function \(F(q_i, p_i, t)\) that remains
+constant along the trajectories of the system in phase space for a given
+Hamiltonian \(H(q_i, p_i, t)\). Mathematically, \(F\) is a constant of
+motion if its total time derivative vanishes:
+</p>
+\[\frac{dF}{dt} = \frac{\partial F}{\partial t} + \{F, H\} = 0\]<p> For example, in a system
+with a time-independent Lagrangian, the Hamiltonian itself is a constant
+of motion, representing the total energy of the system.</p>
+<h2 id="integrability">Integrability</h2>
+<p>A Hamiltonian system with \(N\) degrees of freedom is said to be
+integrable if it possesses \(N\) independent constants of motion. In such
+systems, the equations of motion simplify significantly, and the
+dynamics can be described as linear motion on an invariant tori in phase
+space.</p>
+<p>More formally, a Hamiltonian \(H(q_i, p_i)\) is integrable if there exists
+a single-valued analytical canonical transformation to action-angle
+variables \((J_i, \theta_i)\) such that the Hamiltonian depends only on
+the action variables: </p>
+\[H = H(J_1, J_2, \ldots, J_N)\]<p> In these
+variables, the equations of motion become:
+</p>
+\[J_i = J_{i0}, \quad \theta_i = \omega_i(J) t + \theta_{i0}\]<p> where
+\(\omega_i(J) = \frac{\partial H}{J_i}\) are the frequencies of the system. This
+motion can be mapped to an invariant torus in the appropriate phase
+space. The action represents radii of the tori, while the angle variable
+describes the evolution on the surface of the tori.</p>
+<!-- raw HTML omitted -->
+<h2 id="a-result-a-la-poincaré">A result a la Poincaré</h2>
+<p>Consider perturbed Hamiltonians of the form:
+</p>
+\[H(J, \theta) = H_0(J) + \epsilon H_1(J, \theta)\]<p> where \(\epsilon\) is
+a small parameter, \(H_0(J)\) is integrable, and the frequencies of the
+unperturbed hamiltonian \(\omega_i = \frac{\partial H_0}{J_i}\) are functionally
+independent.</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Poincaré Theorem</strong>
+    <p>
+
+Under these conditions, there exists no constant of motion
+\(\Phi(Q_k, P_k, t)\) that is analytic in \(Q_k, P_k\) and \(\epsilon\), other
+than the Hamiltonian itself.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>A nice sketch of this proof can be seen at [5]. Basically, when
+Poincaré starts with the Hamiltonian \(H = H_0 + \mu H_1\). Then he looks
+for constants of the motion of the form:
+</p>
+\[\Phi(Q, P,\mu) = \sum_{k=0}^\infty \Phi(Q,P)\]<p> where \(Q,P\) are the
+position and momentum variables and where all \(\Phi_k\) are all analytic
+functions of \(Q,P\). Specifically, since \(\Phi\) is a constant of the
+motion, he inserts the above expression in the Poisson Bracket equation
+\(\{H,\Phi\} = 0\) and then insists that for each coefficient of each
+\(\mu^k\) equal to zero. This yields \(\{H_0,\Phi_0\} = 0\), which means
+\(\{H_0,\Phi_k\} = - \{H_0, \Phi_{k-1}\} ~ \forall ~ k>0\). We can solve
+these equations iteratively for all \(\Phi_k\) once \(\Phi_0\), which is a
+constant of motion for the integrble Hamiltonian, is specified. Poincaré
+wants to analytically continue \(\Phi_0\). Then he shows that this is not
+possible due to the presence of denominators which become zero for a
+dense set of hypersurfaces. As a result, the only constant of motion
+that can be analytically continued is the Hamiltonian itself.</p>
+<h2 id="fermis-proof">Fermi&rsquo;s Proof</h2>
+<p>Fermi started out his career trying to prove the ergodic hypothesis. He
+proved that the class of Poincaré-type Hamiltonians are ergodic. The
+proof sketch is quite straightforward. He proceeds via contradiction.
+Suppose, the system is not ergodic. In consequence, at least two
+distinct regions of phase space exist that are invariant under
+Hamiltonian flow. Fermi now asserts that there must a surface separating
+these two regions. This surface must be a constant of motion, since the
+Hamiltonian flow cannot cross it. However, by Poincaré&rsquo;s result, no such
+constant of motion exists for Poincaré-type Hamiltonians. Therefore, the
+system must be ergodic. The problem with this proof is that Fermi
+assumed that the separating surface is analytic, which is not
+necessarily true. The KAM theorem shows that these surfaces are disjoint
+sets that fill most of the phase space, but are not analytic.</p>
+<p>Under a canonical transformation, the FPUT Hamiltonian can be expressed
+as a Poincaré-type Hamiltonian. Therefore, by Fermi&rsquo;s proof, the FPUT
+system is ergodic. We cannot measure ergodicity directly. However, since
+Fermi&rsquo;s Proof dictates that the FPUT system is ergodic, and therefore
+should follow the principle of equal a priori probabilities. This would
+imply that over long times, the law of equipartition of energy should
+hold. This is how the original authors wanted to verify Fermi&rsquo;s proof.</p>
+<p>A more detailed explanation of this connection will be provided later in
+the report.</p>
+<h1 id="the-problem-with-the-problem">The Problem with The Problem</h1>
+<p>However, the numerical simulations by Fermi, Pasta, Ulam and Tsingou
+showed that the system did not thermalize as expected. Instead of energy
+spreading out evenly among all modes, it exhibited a phenomenon known as
+&quot;recurrence,&quot; where the energy returned to the initially excited mode
+after some time.</p>
+<!-- raw HTML omitted -->
+<h1 id="numerical-simulation">Numerical Simulation</h1>
+<p>To verify the results of Fermi, Pasta, Ulam and Tsingou, we perform our
+own numerical simulations of the FPUT system. We used both Euler and
+Velocity-Verlet integration methods to solve the equations of motion.</p>
+<ul>
+<li>
+<p>The Euler method is a simple first-order method, but it can be less
+accurate and does not conserve energy well over long simulations.</p>
+</li>
+<li>
+<p>The Velocity-Verlet method is a second-order symplectic integrator
+that is more accurate and better at conserving energy in Hamiltonian
+systems.</p>
+</li>
+</ul>
+<h2 id="euler-method">Euler Method</h2>
+<p><img
+    src="images/mode_energy_alpha_0.25_beta_0.0_tmax_10000.0.png?width=900px" alt="modeeuler"
+    
+    
+    />
+
+
+
+
+</p>
+<p><img
+    src="images/total_energy_alpha_0.25_beta_0.0_tmax_10000.0.png?width=900px" alt="totaleuler1"
+    
+    
+    />
+
+
+
+
+</p>
+<h2 id="velocity-verlet">Velocity Verlet</h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>We have seen that the numerical simulations do not match the theoretical
+predictions by the original creators of this model. There are some
+questions that need to answered, in light of this discrepancy between
+the theoretical and numerical predictions.</p>
+<h1 id="fermis-proof-problem">Fermi&rsquo;s Proof problem</h1>
+<p>The proof by Fermi has been shown to be incorrect. To see this, a
+landmark theorem by Kolmogorov, Arnold and Moser is required.</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>KAM Theorem</strong>
+    <p>
+
+Consider a Hamiltonian system with \(N\) degrees of freedom, described by
+action-angle variables \((J_i, \theta_i)\). Let the Hamiltonian be given
+by: \[H(J, \theta) = H_0(J) + \epsilon H_1(J, \theta)\]
+
+- \(H_0(J)\) is an integrable Hamiltonian and \(H_1(J, \theta)\) is a small
+  perturbation. <br>
+
+- The perturbation strength \(\epsilon\) is sufficiently small(below
+   \(\epsilon_c\))<br>
+
+- The frequencies of the unperturbed system satisfy,
+  \[\det\left(\frac{\partial^2 H_0}{\partial J_i \partial J_j}\right) = \det\left(\frac{\partial \omega_k}{\partial J_j}\right) \neq 0\]<br>
+
+Then there exists a nowhere dense set of \(H_0\) tori that are only
+slightly deformed by the perturbation. Moreover, the measure of the set
+of surviving tori is nearly that of the full phase space.
+
+The completely destroyed tori of \(H_0\) is dense in the phase space, but
+their total measure is small.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>The KAM theorem provides a resolution to why the FPUT system does not
+thermalize for small perturbations. The surviving invariant tori still
+show signatures of integrable behavior, preventing ergodicity. Fermi in
+his proof assumed that the surface dividing the regions of phase space
+invariant under Hamiltonian flow, is analytic. The work by Kolmogorov,
+shows that these surfaces are not analytic, and are in fact
+&quot;pathological monstrosities&quot;.</p>
+<!-- raw HTML omitted -->
+<h1 id="inquisitions">Inquisitions</h1>
+<p>We try to answer some questions that can be asked and people have
+studied.</p>
+<ul>
+<li>
+<p>Is the FPUT system integrable or non-integrable? Note Poincaré&rsquo;s
+result states that we can&rsquo;t analytically continue the constants of
+motion from the unperturbed system to the perturbed system. It does
+not say anything about introducing new constants of motion.</p>
+</li>
+<li>
+<p>Does the FPUT system not thermalize at all, or does it thermalize over
+very long timescales?</p>
+</li>
+<li>
+<p>Does the FPUT system thermalize for certain initial conditions and not
+for others?</p>
+</li>
+<li>
+<p>Is the FPUT system ergodic after all?</p>
+</li>
+</ul>
+<p>Let&rsquo;s explore these questions one by one.</p>
+<h2 id="is-the-fput-system-integrable-or-non-integrable">Is the FPUT system integrable or non-integrable?</h2>
+<p>People have thought for some time that the FPUT system might be
+integrable after all. However, the simple answer to our question is
+<strong>NO</strong>. Let us consider the \(\alpha\) model with \(N=3\) masses with
+periodic boundary conditions. The Hamiltonian is given by:
+</p>
+\[H = \sum_{i=1}^{3} \frac{p_i^2}{2} + \sum_{i=1}^{2} \left( \frac{1}{2} (x_{i+1} - x_i)^2 + \frac{\alpha}{3} (x_{i+1} - x_i)^3 \right)\]<p>
+Under a simple canonical transformation, we obtain the Hénon-Heiles
+Hamiltonian, which is a well known non-integrable system, that exhibits
+chaotic behavior above a certain energy threshold.</p>
+<h3 id="hénon-heiles-hamiltonian">Hénon Heiles Hamiltonian</h3>
+<p>The Hénon-Heiles Hamiltonian is given by:
+</p>
+\[H = \frac{1}{2} (p_x^2 + p_y^2) + \frac{1}{2} (x^2 + y^2) + x^2 y - \frac{1}{3} y^3\]<p>
+This system was originally proposed to model the motion of a star around
+a galactic center. For energies above a certain threshold, the system
+exhibits chaotic behavior, with trajectories that are highly sensitive
+to initial conditions.</p>
+<p>As a result, we get a clue that the FPUT system might be chaotic for
+higher perturbations or energies.</p>
+<!-- raw HTML omitted -->
+<h2 id="does-the-fput-system-not-thermalize-at-all-or-does-it-thermalize-over-very-long-timescales">Does the FPUT system not thermalize at all, or does it thermalize over very long timescales?</h2>
+<p>After some time of evolution, we see a dip in the energy of the first
+mode. People had conjectured that over longer timescales, the system
+might thermalize.</p>
+<!-- raw HTML omitted -->
+<h3 id="super-period">Super Period</h3>
+<p>Even though there an energy dip after some time, after observing a bit
+longer, we see some sort of super recurrence. Almost all of the energy(
+over 99%) flows back into the first mode. The super period was first
+observed by Tuck and Tsingou(then Menzel) in 1972.</p>
+<!-- raw HTML omitted -->
+<p>We simulated the same using both Euler and Velocity Verlet algorithms.
+We observe super periods in both methods, however for the euler method,
+quite less than 99% of energy returns to the first mode. This problem
+has been eliminated when the velocity verlet method is used.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>There have been some studies that suggest that the FPUT system might
+thermalize over extremely long timescales. Similar to glassy behavior in
+condensed matter systems, the FPUT system might be stuck in a metastable
+state for long times before eventually reaching thermal equilibrium. KAM
+theorem hints that for small perturbations, there are invariant tori
+that survive. Therefore, for initial conditions lying on these tori, the
+system will not thermalize. Building on this Idea F.M. Izrailev and B.V.
+Chirikov proposed the <strong>stochasticity threshold</strong>, also called the
+<strong>Chirikov criterion</strong>[4]. According to this
+criterion, when the perturbation strength exceeds a certain threshold,
+the invariant tori break down, leading to widespread chaos in phase
+space and subsequent thermalization.The original FPUT paper considers
+two models, the \(\alpha\) and \(\beta\) models, with certain initial
+conditions. Israilev and Chirikov showed for the \(\beta\) model,the
+initial conditions lie below the stochasticity threshold for the
+respective models, explaining the lack of thermalization.</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Chirikov Criterion</strong>
+    <p>
+
+Consider the \(\beta\) model with N masses. Let us assume fixed boundary
+conditions. Also assume that the initial value problem is just the \(k\)th
+mode excited. The stochasticity threshold for a mode number \(k\) is given
+by:
+
+\[3 \beta_s \left( \frac{\partial x}{ \partial z} \right)_m^2 \approx \begin{cases}
+            \frac{3 }{k}, & \text{if  } k \ll N\\\\
+            \frac{3 \pi^2}{N^2} \left(\frac{k}{N}\right)^2, & \text{if} N-k \ll N
+         \end{cases}\]
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>There is region of conditions where due to the KAM theorem, the system
+does not thermalize. This criterion is a property of a lot of other
+systems as well. The system here exhibits <strong>Kolmogorov Stability</strong>. The
+criterion shows that very high nonlinear couplings are required for
+thermalization when low frequency modes are excited initially. For
+higher modes and large \(N\), the threshold is much lower, and
+thermalization can occur for smaller nonlinear couplings.</p>
+<h1 id="resolutions">Resolutions</h1>
+<h2 id="which-neighbour-is-integrable">Which neighbour is Integrable?</h2>
+<p>This energy recurrence phenomenon is explained by the fact that there is
+an integrable Hamiltonian in the neighbourhood of the FPUT system.(We
+can map a Hamiltonian to a space where this sentence makes perfect
+sense). That cannot be the linear model, since the Poincare surfaces of
+the FPU are quite different from that of the linear one. In the quest
+for finding a suitable candidate, two of them have been the leading
+candidates,</p>
+<ol>
+<li>
+<p>The KdV equation.</p>
+</li>
+<li>
+<p>The toda Lattice</p>
+</li>
+</ol>
+<h2 id="the-kdv-equation">The KdV Equation</h2>
+<p>We shall look at the connection to the KdV equation in more detail. The
+FPUT system can be regarded a discrete approximation to the integrable
+Korteweg-de Vries (KdV) equation. Let&rsquo;s see how. We shall consider the
+\(\alpha\) model for simplicity. The connection to the KdV equation is a
+tiny bit technical, so bear with me. We will show that the naive
+approach to the continuum limit does not work, and leads to unphysical
+results. We follow the approach by [12].</p>
+<p>The FPUT equations of motion for the \(\alpha\) model with arbitrary \(m\)
+and \(k\) are given by:
+</p>
+\[m \ddot{x}_i = k (x_{i+1} - 2x_i + x_{i-1})\left(1 + \alpha (x_{i+1} - x_{i-1}) \right)\]<p>
+We approximate the spring mass system as a continuous string of length
+L. Let the equilibrium positions of the masses be given by \(x_i^0 = ih\),
+where \(h = L/(N+1)\) is the spacing between masses. Denote \(\rho\) is the
+density of the string, then \(m = \rho h\). Let \(\kappa\) denotes the
+Young&rsquo;s modulus for the string (i.e., the spring constant for a piece of
+unit length) Then k = \(\kappa/h\) will be the spring constant for a piece
+of length h.</p>
+<p>Defining \(c = \sqrt{\kappa/\rho}\) we obtain,
+</p>
+\[\ddot{x}_i = c^2 \frac{(x_{i+1} - 2x_i + x_{i-1})}{h^2}\left(1 + \alpha (x_{i+1} - x_{i-1}) \right)\]<p>
+Let \(u(x,t)\) be the function measuring the displacement of the string
+from equilibrium at position \(x\) and time \(t\). Let us analyse for one
+particular \(x=x_i\) Then,</p>
+<ul>
+<li>
+<p>\(x_i(t) = u(x, t)\)</p>
+</li>
+<li>
+<p>\(x_{i+1}(t) = u(x + h, t)\)</p>
+</li>
+<li>
+<p>\(x_{i-1}(t) = u(x - h, t)\)</p>
+</li>
+</ul>
+<p>We can see that \(\ddot{x}_i = u_{tt} (x, t)\). Using Taylor series
+expansion about \(x\), we have,
+</p>
+\[\frac{(x_{i+1} - 2x_i + x_{i-1})}{h^2} = u_{xx}(x, t) + u_{xxxx}(x, t) \frac{h^2}{12} + O(h^4)\]<p>Similarly,
+</p>
+\[\alpha (x_{i+1} - x_{i-1}) = (2 \alpha h )u_x(x, t) + \frac{2 \alpha h^3}{6} u_{xxx}(x, t) + O(h^5)\]<p>We arrive at,
+</p>
+\[\left(\frac{1}{c^2}\right) u_{tt} - u_{xx} = \epsilon u_x u_{xx} + O(h^2)\]<p>
+where \(\epsilon = 2 \alpha h\). We obtain the PDE,
+</p>
+\[u_{tt} = c^2(1 + \epsilon u_x )u_{xx}\]<p>One can draw parallels between this equation and the inviscid Burgers
+equation, which is known to develop shocks in finite time, for generic
+initial conditions. For wave like solutions, the rising part of the wave
+with goes faster with \(u_x > 0\) than the fallling part with \(u_x < 0\),
+leading to wave steepening and shock formation. One can see how
+following the inviscid Burgers equation develops shocks over a finite
+time. This happens over a characteristic time scale \(t_s\) which is found
+to be much smaller than the recurrence time observed in the FPUT
+simulations.</p>
+<p>This is unphysical, since the FPUT system with small nonlinearity does
+not exhibit such shock formation. To resolve this issue, we follow the
+approach by Zabusky and Kruskal. The correct approach is to keep higher
+order terms in the Taylor series expansion. Keeping terms upto order
+\(h^2\), we obtain the PDE,
+</p>
+\[\frac{1}{c^2} u_{tt} = (1 + 2 \alpha h u_x )u_{xx} + \frac{ h^2}{12} u_{xxxx} + O(h^4)
+                \tag{KZ}\]<p>The additional fourth order derivative term acts as a dispersive term,
+preventing shock formation. We now differentiate w.r.t. \(x\) and define
+\(w = u_x\), to obtain,
+</p>
+\[\frac{1}{c^2} w_{tt} = w_{xx} + \alpha h \frac{\partial}[2]{(w^2)}{x} + \frac{h^2}{12} w_{xxxx} + O(h^4)\]<p>This is known as the Boussinesq equation. This admits wave like
+solutions that do not form shocks, these are periodic water waves.</p>
+<p>Note that for small values \(\alpha\) and \(h\), the wave like solutions
+should qualitatively behave like solutions to the linear wave equation.
+In general, the solutions will be superpositions of right and left
+moving waves. Here, these two cases are treated differently. To be
+specific, let us consider only right moving waves. We would like to look
+for solutions, such that behave more and more like right moving waves
+for longer and longer times as \(\alpha, h \to 0\).</p>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Travelling Wave ansatz</strong>
+    <p>
+
+Suppose that \(y(\xi, \tau)\) is a smooth function of two real variables
+\(\xi, \tau\) such that the map \(\tau \mapsto y(\cdot, \tau)\) is uniformly
+continuous from \(\mathbb{R}\) to \(L^2(\mathbb{R})\) with the sup norm.
+
+This means that for every \(\epsilon > 0\), there exists a \(\delta > 0\)
+such that for all
+\[|\tau_1 - \tau_2| < \delta \implies ||y(\xi, \tau_1) - y(\xi, \tau_2)||_{L^2} < \epsilon ~~\forall ~~ \xi \in \mathbb{R}\]
+
+Then for \(|t -t_0| < T = \delta/ (\alpha h c)\),
+\(|\alpha h c (t - t_0)| < \delta\). Therefore,
+\[||y(x - ct, \alpha h c t) - y(x - ct, \alpha h c t_0)||_{L^2} < \epsilon ~~\forall ~~ \xi \in \mathbb{R}\]
+where \(x = \xi + ct\).
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>To interpret this physically, the function
+\(u(x,t) = y(x - ct, \alpha h c t)\) uniformly approximates the right
+moving wave \(u^0(x,t) = y(x - ct, \alpha h c t_0)\) over the time
+interval \(|t - t_0| < T\). To restate this,
+\(u(x,t) = y(x - ct, \alpha h c t)\) is approximately a right moving wave
+whose shape gradually changes over time.</p>
+<p>We now substitute \(w(x,t) = y(x - ct, \alpha h c t)\) into the (KZ)
+equation, and divide by \(- 2 \alpha h\). Neglecting terms of order
+\(O(h^4)\), we obtain the equation,
+</p>
+\[y_{\xi \tau} - \left(\frac{\alpha h}{2}\right) y_{\tau \tau} = -\frac{h^2}{24} y_{\xi \xi \xi \xi} - y_\xi y_{\xi \xi}\]<p>
+We begin by making the substitutions, \(\xi = x - ct\) and
+\(\tau = \alpha h c t\). Now, we can pass it into the continuum limit
+\(\alpha, h \to 0\). We assume that \(h\) and \(\alpha\) are related such that
+\(\alpha, h \to 0\) and \(h/\alpha\) tend to a positive limit. We then
+define \(\delta = \lim_{h \rightarrow 0} \sqrt{\frac{h}{24 \alpha}}\).
+This also means that \(\alpha h = O(h^2)\). </p>
+\[\begin{align*}
+                 \frac{\partial^k}{\partial x^k} = \frac{\partial^k}{\partial \xi^k} ~~;~~ \frac{\partial}{\partial t} = -c \frac{\partial \xi} + \alpha h c \frac{\partial}{\partial \tau} \\
+                 \frac{\partial^2}{\partial t^2} = c^2 \frac{\partial^2}{\partial \xi^2} - 2 \alpha h c^2 \frac{\partial^2}{\partial \xi^2}{\tau}+ (\alpha h c)^2 \frac{\partial^2}{\partial \tau^2}
+\end{align*}\]<p> Our wave operator reduces to
+</p>
+\[\frac{1}{c^2} \frac{\partial^2}{\partial t^2} - \frac{\partial^2}{\partial x^2} = - 2 \alpha h \frac{\partial^2}{\partial \xi \partial \tau}  + (\alpha h)^2 \frac{\partial^2}{\partial \tau^2}\]<p>
+In this limit, we obtain the celebrated Korteweg-de Vries Equation by
+taking \(v(\xi, \tau) = y_\xi(\xi, \tau)\):
+</p>
+\[v_\tau + v v_\xi + \delta^2 v_{\xi \xi \xi} = 0\]<p>In their seminal 1965 paper, Zabusky and Kruskal performed numerical
+simulations of the KdV equation and discovered solitons, which are
+stable, localized wave packets that maintain their shape while traveling
+at constant speed. They then observed how solitons interfere with each
+other, and found that they pass through each other without changing
+shape. Using this connection to solitons, they gave a phenomenological
+explanation for the recurrence phenomenon observed in the FPUT system.
+We now see how these solitons arise in the KdV equation, from a small
+section of the report [8].</p>
+<blockquote>
+<p>Initially, the first two terms of the KdV equation dominate and the
+classical overtaking phenomenon occurs; that is, \(u\) steepens in
+regions where it has a negative slope.(Due to the first two terms
+being similar to the inviscid Burgers equation). Second, after \(u\) has
+steepened sufficiently, the third term becomes important and serves to
+prevent the formation of a discontinuity. Instead, oscillations of
+small wavelength (of order \(\delta\)) develop on the left of the front.
+The amplitudes of the oscillations grow and finally each oscillation
+achieves an almost steady amplitude (which increases linearly from
+left to right) and has a shape almost identical to that of an
+individual solitary-wave solution of the KdV equation. Finally, each
+such &quot;solitary-wave pulse&quot;or &quot;soliton&quot; begins to move uniformly at
+a rate (relative to the background value of u from which the pulse
+rises) which is linearly proportional to its amplitude. Thus, the
+solitons spread apart. Because of the periodicity, two or more
+solitons eventually overlap spatially and interact nonlinearly.
+Shortly after the interaction, they reappear virtually unaffected in
+size or shape. In other words, solitons &quot;pass through&quot; one another
+without losing their identity.</p>
+<p><strong>Here we have a nonlinear physical process in which interacting
+localized pulses do not scatter irreversibly.</strong></p>
+</blockquote>
+<!-- raw HTML omitted -->
+<p>They explained the recurrence phenomenon on an FPUT system with periodic
+boundary conditions. These solitons arise and interfere periodically,
+leading to the recurrence of the initial state after some time. Note
+that these derivation also agrees with the Chirikov criterion. The KdV
+approximation is valid for small nonlinearity, which is precisely the
+regime where the stochasticity threshold is high, preventing
+thermalization.</p>
+<h2 id="toda-lattice">Toda Lattice</h2>
+<p>The N-particle Toda lattice also serves as a leading candidate as an
+integrable Hamiltonian in the neighbourhood of the FPUT lattice.</p>
+\[H = \frac{1}{2} \sum P_k^2 +\frac{1}{2} \left(\sum \exp\left(Q_{k} - Q_{k-1}\right) \right)\]<p>where the index \(k\) runs from \(1\) to \(N\) and we impose periodic boundary
+consitions \(Q_{N+1} = Q_1\). The Toda lattice can be in a sense, the
+discretized form of the KdV equation. One can show that the Toda Lattice
+is completely integrable using LAX pairs.</p>
+<h1 id="connection-to-statistical-mechanics">Connection to Statistical Mechanics</h1>
+<p>Statistical mechanics has been one the most successful theories in
+physics. It provides a microscopic explanation for macroscopic
+thermodynamic phenomena, for widly different systems. Even after more
+than a century after Boltzmann&rsquo;s pioneering work, the foundations of
+statistical mechanics are still not quite rigourously justified. Some of
+them include what the thermodynamic limit really means, whether the free
+energy functionals are well defined at that limit, why do these systems
+thermalize, and most importantly, the <strong>ergodic hypothesis</strong>. One might
+think it would be too naive to apriori expect equipartition of energy in
+a slightly perturbed system. But if we establish a connection between
+ergodicity and the basic building block of statistical mechanics, the
+<strong>principle of equal a priori probabilities</strong>, we can see why the FPUT
+problem is so rich in its physical implications.</p>
+<h2 id="ergodicity">Ergodicity</h2>
+<div class="callout info">
+  <div class="callout-content">
+    <strong>Ergodic Hypothesis</strong>
+    <p>
+
+Over long periods of time, the time spent by a system in some region of
+the phase space of microstates with the same energy is proportional to
+the volume of this region.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>This is a restatement of the hypothesis that Boltzmann used to derive
+the microcanonical ensemble and the law of equipartition of energy.
+Let&rsquo;s see a heuristic proof of this statement.</p>
+<p>Consider a system with Hamiltonian \(H(q_i, p_i)\) and total energy \(E\).
+Let us discretize the phase space into small cells of volume
+\(\Delta V_\Gamma\). The total time spent by the system in a cell
+\(\Delta V_\Gamma\) over a long time \(T\) is given by:
+</p>
+\[\tau \propto \Delta V_\Gamma\]<p> Therefore, the probability of finding
+the system in that cell, in our long time observation is given by:
+</p>
+\[P(\Delta V_\Gamma) = \frac{\tau}{T} \propto \Delta V_\Gamma\]<p> Taking
+the limit \(\Delta V_\Gamma \to 0\), we obtain the probability density
+function: </p>
+\[dP = \rho(q_i, p_i) dV_\Gamma \propto dV_\Gamma\]<div class="callout info">
+  <div class="callout-content">
+    <strong>Principle of Equal Equilibrium a Priori Probabilities</strong>
+    <p>
+
+In an isolated system in equilibrium, all accessible microstates
+corresponding to one macrostate are equally probable.
+</p>
+  </div>
+</div>
+
+
+<style>
+   
+  .callout {
+    position: relative;  
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid;  
+    border-radius: 3px;  
+    font-family: Inter font, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+     
+    
+  .callout::before {
+    content: "";
+    font-family: "FontAwesome";  
+    font-weight: normal;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: inherit;
+  }
+   
+   
+  .callout.info {
+    border-color:  #686868;
+  }
+  
+  .callout.info::before {
+    content: "";  
+  }
+  
+   
+  .callout.warning {
+    border-color: #ff6f00;
+  }
+  
+  .callout.warning::before {
+    content: "";  
+  }
+  
+   
+  .callout.success {
+    border-color: #43a047;
+  }
+  
+  .callout.success::before {
+    content: "";  
+  }
+  
+   
+  .callout.error {
+    border-color: #e53935;
+  }
+  
+  .callout.error::before {
+    content: "";  
+  }
+</style>
+
+
+<p>This principle is the cornerstone of statistical mechanics. It allows us
+to derive the microcanonical ensemble and subsequently other ensembles.
+The previous definition has a certain nuance that is often overlooked.
+The word accessible is very important here. The microcanonical ensemble
+is defined for an isolated system with fixed total energy \(E\). Suppose
+for a system which has an additional constant of motion \(\Phi(p_i, q_i)\)
+. Then for a certain initial condition, both \(H(p_i, q_i)\) and
+\(\Phi(p_i, q_i)\) will be conserved. Therefore, our energy hypersurface
+will be further constrained to a submanifold defined by
+\(\Phi(p_i, q_i) = \phi_0\). So the probability density function will be
+given by:
+</p>
+\[dP \propto \delta(H(p_i, q_i) - E) \delta(\Phi(p_i, q_i) - \phi_0) dV_\Gamma\]<p>
+We need to ensure that there are no additional constants of motion other
+than the Hamiltonian itself, to obtain the microcanonical ensemble.
+Recall that Poincaré&rsquo;s result states that for perturbed Hamiltonians of
+that form, there exists no constant of motion \(\Phi(Q_k, P_k, t)\) that
+is analytic in \(Q_k, P_k\) and \(\epsilon\), other than the Hamiltonian
+itself. This motivated Fermi&rsquo;s proof to show that those Hamiltonians are
+ergodic. The Ergodic hypothesis also helps us understand systems and
+their validity in the real world. This relates time averages to ensemble
+averages.
+</p>
+\[\overline{A} = \lim_{T \to \infty} \frac{1}{T} \int_0^T A(q(t), p(t)) dt = \langle A \rangle = \int A(q, p) \rho(q, p) dV_\Gamma\]<p>
+For real systems, we can only measure time averages. The ergodic
+hypothesis allows us to equate these to ensemble averages, which are
+easier to compute theoretically. A proof of this hypothesis still eludes
+us. There have been some system specific proofs, by von Neumann and
+Birkhoff, but a general proof is still unknown.</p>
+<h2 id="energy-equipartition">Energy Equipartition</h2>
+<p>The principle of equal a priori probabilities leads to the law of
+equipartition of energy. This is a fairly standard derivation. One can
+look at any statistical mechanics textbook for details, for example
+[@Huang]. Since equipartition of energy is a direct consequence of the
+principle of equal a priori probabilities, FPUT decided to test this as
+a signature of ergodicity in their system.</p>
+<h1 id="conclusions">Conclusions</h1>
+<p>The foundations of statistical mechanics are still not completely
+rigourously justified. Khinchin [@Khinchin2013] and Ruelle [@Ruelle1999]
+have a lot of opinions and criticisms about these foundations. The FPUT
+problem is a classic example that highlights the subtleties involved in
+these justifications. It launched the fields of studying solitons and
+chaos theory.</p>
+<p>Moreover, FPUT forever pioneered the usage of computers in physics
+research.</p>
+<p>[1] G. P. Berman and F. M. Izrailev, The Fermi-Pasta-Ulam problem: Fifty years of progress, Chaos: An Interdisciplinary Journal of Nonlinear Science, vol. 15, no. 1, 2005. DOI: 10.1063/1.1855036.</p>
+<p>[2] Wolfram Research, Inc., Henon–Heiles System, 2002. Available at: <a href="http://mathworld.wolfram.com/Henon-HeilesSystem.html">http://mathworld.wolfram.com/Henon-HeilesSystem.html</a>
+.</p>
+<p>[3] J. L. Tuck and M. T. Menzel, The superperiod of the nonlinear weighted string (FPU) problem, Advances in Mathematics, vol. 9, no. 3, pp. 399–407, 1972. DOI: 10.1016/0001-8708(72)90024-2.</p>
+<p>[4] F. M. Izrailev and B. V. Chirikov, Statistical properties of a nonlinear string, Doklady Akademii Nauk SSSR, vol. 166, no. 1, pp. 57–59, 1966.</p>
+<p>[5] J. Ford, The Fermi-Pasta-Ulam problem: Paradox turns discovery, Physics Reports, vol. 213, no. 5, pp. 271–310, 1992. DOI: 10.1016/0370-1573(92)90116-H.</p>
+<p>[6] G. Gallavotti, The Fermi-Pasta-Ulam Problem, Lecture Notes in Physics, Springer, 2008. DOI: 10.1007/978-3-540-72995-2.</p>
+<p>[7] T. Dauxois, M. Peyrard, and S. Ruffo, The Fermi–Pasta–Ulam “numerical experiment”: history and pedagogical perspectives, European Journal of Physics, vol. 26, no. 5, pp. S3–S11, 2005. DOI: 10.1088/0143-0807/26/5/S01.</p>
+<p>[8] N. J. Zabusky and M. D. Kruskal, Interaction of solitons in a collisionless plasma and the recurrence of initial states, Physical Review Letters, vol. 15, no. 6, pp. 240–243, 1965. DOI: 10.1103/PhysRevLett.15.240.</p>
+<p>[9] K. Huang, Statistical Mechanics, 2nd ed., John Wiley &amp; Sons, 1987.</p>
+<p>[10] A. Ya. Khinchin, Mathematical Foundations of Statistical Mechanics, Dover Publications, 2013.</p>
+<p>[11] D. Ruelle, Statistical Mechanics: Rigorous Results, World Scientific Publishing, 1999.</p>
+<p>[12] R. S. Palais, The Symmetries of Solitons, arXiv:dg-ga/9708004, 1997.</p>
+<p>[13] E. Fermi, J. Pasta, and S. Ulam, Studies of Nonlinear Problems, Los Alamos National Laboratory, Technical Report LA-1940, 1955.</p>
+
+        </div>
+      </article>
+
+      <hr />
+
+      <div class="post-info">
+        
+        
+
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          4866 Words
+        </p>
+
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          
+            2025-12-26 05:30
+          
+
+           
+            
+          
+        </p>
+      </div>
+        <hr />
+        <div class="sharing-buttons">
+          
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=FPUT&amp;caption=FPUT&amp;canonicalUrl=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=FPUT&amp;body=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f&amp;media=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f;description=FPUT" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f&amp;title=FPUT&amp;summary=FPUT&amp;source=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f&amp;resubmit=true&amp;title=FPUT" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f;title=FPUT" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=FPUT%20https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f&amp;t=FPUT" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=FPUT&amp;url=https%3a%2f%2ftheinvisiblefoe.github.io%2fposts%2ffput%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+        </div>
+
+      
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+
+            
+            <span class="button next">
+                <a href="https://theinvisiblefoe.github.io/posts/eqbm/">
+                    <span class="button__text">Equilibrium Innit</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+      
+
+      
+
+      
+
+    </main>
+  </div>
+
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.08b680078a3cf9c69e3dd217a5aa52cfddd4a1d850f8cdff127fdd7421a71f8b2b474be69386f67819edace92273916e7230c9054f38107db9dc6730b3530ab5.js" integrity="sha512-CLaAB4o8&#43;caePdIXpapSz93UodhQ&#43;M3/En/ddCGnH4srR0vmk4b2eBntrOkic5FucjDJBU84EH253Gcws1MKtQ=="></script>
+
+
+
+
+    </body>
+</html>

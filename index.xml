@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to the Octopus&#39; Garden</title>
+    <title>Welcome to the Octopus&#39;s Garden</title>
     <link>https://theinvisiblefoe.github.io/</link>
-    <description>Recent content on Welcome to the Octopus&#39; Garden</description>
+    <description>Recent content on Welcome to the Octopus&#39;s Garden</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://theinvisiblefoe.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -14,21 +14,21 @@
       <link>https://theinvisiblefoe.github.io/posts/eqbm/</link>
       <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://theinvisiblefoe.github.io/posts/eqbm/</guid>
-      <description>Introduction This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University. The slides for which were made in LaTeX using beamer and can be found here, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. The blog aims to demonstrate how to deal with statistically large systems(systems with a large number of degrees of freedom) and the conditions under which they might attain equilibrium.</description>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;This is technically my first blog post containing actual material here. I gave a presentation for the Maths Club at my University.&#xA;The slides for which were made in LaTeX using beamer and can be found &lt;a href=&#34;https://raw.githubusercontent.com/TheInvisibleFoe/IISER_notes/main/IdentPres/slides/main.pdf&#34;&gt;here&lt;/a&gt;, on my GitHub. I just converted the latex document to markdown using Pandoc and after some minor tweaks, I have posted it here. The blog aims to demonstrate how to deal with statistically large systems(systems with a large number of degrees of freedom) and the conditions under which they might attain equilibrium. Enjoy :)&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
       <link>https://theinvisiblefoe.github.io/links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://theinvisiblefoe.github.io/links/</guid>
-      <description>Stuff The page,as the name suggests is just a literal stockpile of stuff. This page contains links to some interesting stuff, to notes from my classes at IISER-K and a cornucopia of topics all unrelated to each other.&#xA;Handouts: The professors here provide material to supplement their course. The material covers course notes to tutorials and assignments and their solutions. The institute uses WeLearn built on moodle to manage courses. There is a cli-tool that allows you to download all the files instructors have uploaded over Welearn and download it locally.</description>
+      <description>&lt;h1 id=&#34;stuff&#34;&gt;Stuff&lt;/h1&gt;&#xA;&lt;p&gt;The page,as the name suggests is just a literal stockpile of stuff. This page contains links to some interesting stuff, to notes from my classes at IISER-K and a cornucopia of topics all unrelated to each other.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/TheInvisibleFoe/IISER_Handouts&#34;&gt;Handouts&lt;/a&gt;: The professors here provide material to supplement their course. The material covers course notes to tutorials and assignments and their solutions. The institute uses WeLearn built on moodle to manage courses. There is a cli-tool that allows you to download all the files instructors have uploaded over Welearn and download it locally. So during the semester I run welearn-bot to download the handouts.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About me</title>
       <link>https://theinvisiblefoe.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://theinvisiblefoe.github.io/about/</guid>
-      <description>I am Sabarno Saha, a student at IISER-Kolkata studying anything and everything I like. I like Physics and Maths. When I am not studying, which is often, I like quizzing, watching TV Shows and watching Sebastian Lague or Nerdstalgic on YouTube.&#xA;I like coding sometimes. My computer runs Fedora with Hyprland. I used to use Arch before, but I could not handle a distro that randomly breaks on my laptop when I try to do actual work(which is not often).</description>
+      <description>&lt;p&gt;I am Sabarno Saha, a student at IISER-Kolkata studying anything and everything I like. I like Physics and Maths. When I am not studying, which&#xA;is often, I like quizzing, watching TV Shows and watching &lt;a href=&#34;https://www.youtube.com/user/Cercopithecan&#34;&gt;Sebastian Lague&lt;/a&gt; or &lt;a href=&#34;https://www.youtube.com/@Nerdstalgic&#34;&gt;Nerdstalgic&lt;/a&gt; on YouTube.&lt;/p&gt;&#xA;&lt;p&gt;I like coding sometimes. My computer runs Fedora with &lt;a href=&#34;https://github.com/hyprwm/Hyprland&#34;&gt;Hyprland&lt;/a&gt;. I used to use Arch before, but I could not handle a distro that randomly breaks on my laptop when I try to do actual work(which is not often). I spend quite a lot of my free time watching TV series(please watch &lt;a href=&#34;https://www.imdb.com/title/tt5687612/&#34;&gt;Fleabag&lt;/a&gt;, it’s amazing). Currently, I am watching &lt;a href=&#34;https://www.imdb.com/title/tt11691774/&#34;&gt;Only Murders in the Building&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://theinvisiblefoe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FPUT</title>
+      <link>https://theinvisiblefoe.github.io/posts/fput/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://theinvisiblefoe.github.io/posts/fput/</guid>
+      <description>&lt;p&gt;Continuing the lazy turn of events, the second blog on my very &amp;ldquo;frequently updated&amp;rdquo; website, is brought to you&#xA;by another term project of mine, courtesy of my Non linear Dynamics professor and the geniuses over at Los Alamos,namely&#xA;Enrico Fermi, John Pasta, Stanislaw Ulam and Mary Tsingou. More commonly known as the FPUT problem, the methods used and the conclusions&#xA;reached in this paradox-of-the-decade have heralded the age of computational physics and a more nuanced study of CHAOS.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Equilibrium Innit</title>
       <link>https://theinvisiblefoe.github.io/posts/eqbm/</link>

@@ -271,6 +271,7 @@ indexing of the variables often carries the notion of time.
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -292,25 +293,29 @@ indexing of the variables often carries the notion of time.
 process.</p>
 <p>\[P(\hat{W}(t+\Delta t)=x | \hat{W}(t)=x&rsquo;) = \frac{1}{\sqrt{2 \pi \Delta t}}\exp(-\frac{(x-x&rsquo;)^2}{2 \Delta t})\]</p>
 <p>Let&rsquo;s see what this equation says. Suppose we have a particle moving in 1D, at a position \(x = x'\) at \(t = t_0\). Then the probability of finding the particle at some position \(x\) after some time \(\Delta t\), is described by a gaussian distribution \(N(x',\Delta t)\). This equation makes sense intuitively. The gaussian probability peaks at the mean \(x'\) and a measure of its spread is given by \(\Delta t\). Here is a small illustration,</p>
-<p><img
-    src="normal_dist_std.png?width=800px" alt="Gaussian with different spreads \(\sigma\)"
-    
-    
-    />
+<p>
 
 
 
+
+
+
+
+
+  <img src="normal_dist_std.png?width=800px" alt="Gaussian with different spreads \(\sigma\)">
 
 </p>
 <p>We can see that the width increases with increase in the standard deivation. This just means if we take a larger time step \(\Delta t\), the particle has more time to move to further and further distances, and the distribution flattens. Let&rsquo;s see what the Wiener Process looks like, before we move onto the topic of this blog.</p>
-<p><img
-    src="brownian_motion.png?width=800px" alt="Brownian Motion "
-    
-    
-    />
+<p>
 
 
 
+
+
+
+
+
+  <img src="brownian_motion.png?width=800px" alt="Brownian Motion ">
 
 </p>
 <h3 id="markov-chains">Markov Chains</h3>
@@ -377,6 +382,7 @@ Chain.
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -464,6 +470,7 @@ Kolmogorov equation as</p>
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -593,6 +600,7 @@ current as \[J_{xx'} = k_{xx'}p(x';t) - k_{x'x}p(x;t)\]
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -673,6 +681,7 @@ said to be microscopically reversible.
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -754,6 +763,7 @@ number of steps.
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -780,14 +790,16 @@ to the strongly connected graph.</p>
 Irreducibility is a necessary condition for the Perron Frobenius theorem
 to hold.</em></p>
 <p>Here are is an example of a jump network :</p>
-<p><img
-    src="jumpnetwork.png?width=800px" alt="Source : [1]"
-    
-    
-    />
+<p>
 
 
 
+
+
+
+
+
+  <img src="jumpnetwork.png?width=800px" alt="Source : [1]">
 
 </p>
 <!-- raw HTML omitted -->
@@ -874,6 +886,7 @@ the condition for equilibrium.</p>
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -956,6 +969,7 @@ matrices.
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1045,6 +1059,7 @@ Perron Frobenius theorem to hold.</em></p>
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1073,14 +1088,16 @@ The markov chain is said to be irreducible if there is only one
 equivalence class, which is the state space of the Markov chain.</p>
 <p>Here in our jump networks any state can be reached from any other state
 in a finite number of steps. Thus our markov chain is irreducible.</p>
-<p><img
-    src="scc.png?width=800px" alt="Source : Wikipedia"
-    
-    
-    />
+<p>
 
 
 
+
+
+
+
+
+  <img src="scc.png?width=800px" alt="Source : Wikipedia">
 
 </p>
 <h3 id="primitive-matrices">Primitive Matrices</h3>
@@ -1155,6 +1172,7 @@ in a finite number of steps. Thus our markov chain is irreducible.</p>
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1247,6 +1265,7 @@ in a finite number of steps. Thus our markov chain is irreducible.</p>
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1335,6 +1354,7 @@ matrix \(P\).
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1460,6 +1480,7 @@ transition probability matrix for an irreducible Markov chain and let
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1504,14 +1525,16 @@ vertex.</p>
 pair of vertices.</p>
 </li>
 </ul>
-<p><img
-    src="/eqbm/drawing-stars.png" alt="Source: The Internet"
-    
-    
-    />
+<p>
 
 
 
+
+
+
+
+
+  <img src="/eqbm/drawing-stars.png" alt="Source: The Internet">
 
 </p>
 <h3 id="trees">Trees</h3>
@@ -1576,6 +1599,7 @@ A tree with \(n\) vertices has \(n-1\) edges.
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1655,6 +1679,7 @@ vertex and \(|E|\) is the number of edges.
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1737,6 +1762,7 @@ degree one, then the sum of the degrees of all vertices must be at least
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1814,6 +1840,7 @@ stationary state distribution is the equilibrium distribution.
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1899,6 +1926,7 @@ distribution.</p>
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -1975,6 +2003,7 @@ from each other
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -2056,6 +2085,7 @@ admits an equilibrium distribution if for any sequence states
    
   .callout.success {
     border-color: #43a047;
+    border: 0px solid;  
   }
   
   .callout.success::before {
@@ -2224,6 +2254,23 @@ This has been the quite abrupt end of my first blog. I never know how to end, so
         </div>
 
       
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://theinvisiblefoe.github.io/posts/fput/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">FPUT</span>
+                </a>
+            </span>
+            
+
+            
+        </div>
+    </div>
+
 
       
 

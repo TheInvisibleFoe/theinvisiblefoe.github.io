@@ -1624,7 +1624,7 @@ order terms in the Taylor series expansion. Keeping terms upto order
 preventing shock formation. We now differentiate w.r.t. \(x\) and define
 \(w = u_x\), to obtain,
 </p>
-\[\frac{1}{c^2} w_{tt} = w_{xx} + \alpha h \frac{\partial^2}{w}{x} + \frac{h^2}{12} w_{xxxx} + O(h^4)\]<p>This is known as the Boussinesq equation. This admits wave like
+\[\frac{1}{c^2} w_{tt} = w_{xx} + \alpha h \frac{\partial^2}{\partial w \partial x} + \frac{h^2}{12} w_{xxxx} + O(h^4)\]<p>This is known as the Boussinesq equation. This admits wave like
 solutions that do not form shocks, these are periodic water waves.</p>
 <p>Note that for small values \(\alpha\) and \(h\), the wave like solutions
 should qualitatively behave like solutions to the linear wave equation.
